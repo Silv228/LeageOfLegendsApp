@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 155" width="25" height="24">
+	<title>Champion_stats_ingame_02</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m0 0h129v155h-129z"/>
+		</clipPath>
+		<image  width="24" height="24" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIAgMAAAAog1vUAAAAAXNSR0IB2cksfwAAAAlQTFRFAAAAe2z+e2z+ExSTGwAAAAN0Uk5TAP/ffz726QAAAOtJREFUeJyNlEEWwyAIRHGRI3Afj+BC+rrMUXL0RiMCTtuE5Y8Mg0SIXEihGElEakTbiSSiRmJqPxSP8YXymhcyR56vqciJMaCkxPS/oCllJSexkogSIn6ExMVq4R9iQEmeoCBVwcJPlBDxHSog1S96u0UoJWChF1xQgWHoZD064FJ1GA7p+J2NHdGjH+KNKCMiUH8hKohUynk4AM0/N6GUNb1HVJ2rUTD7d8eXSWtwFMy0vrHavlBAZ3lrcG4M99C34dGtAx7tWoMN9RS3DfROTCqp690j01W0rLHmYd12Z8GVEK9KwaEGKNEH6AvdkeWkOFEAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<g id="Artboard 1" clip-path="url(#cp1)">
+		<use id="Ability_power_icon.psd" href="#img1" x="30" y="42"/>
+	</g>
+</svg>

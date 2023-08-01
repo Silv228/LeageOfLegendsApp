@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 26" width="16" height="16">
+	<title>Champion_stats_ingame_02</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m0 0h28v26h-28z"/>
+		</clipPath>
+		<image  width="16" height="16" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IB2cksfwAAAP9QTFRF7+bS8ObS8ObS8ObS7+bS8ObS8ObS8ObS8ObS8ObS8ObS8OXS8OXS8OXS8OXS8OXR8ObS8OXSAAAA8OXR8ObS8ObS8ObS8ObS8ObS8OXR8ObS8ObS8ObS7+XS8ObS8ObS8ObR8ObS8ObS8ObS8ObS8ObS8ObS8ObS8ObS8ObS8ObS8ObS8ObS8uTV8ObS8OXS8ObS8ObS8OXS8ObS8ObS8ObS8ObS8OXS8ObS8ObS7+XS8ObS8ObS8ObS7+bR7+bR8ObS8ObS8ObS8ObS8ObS8ObS7+bS8ObS8ObS7+TS8ObS8ObS8ObS8ObS8ObS8OXS8ObS8ObS8ObS8ObS8OXSlUXWrwAAAFV0Uk5Tvd7c37bd//r5+9U8HiAdQ/0fACf8j8S/iyjBu9YmsbAt/s1baWhcqHCpCa23ArIn70kFa+bgdA5G4hZt92ASEE7tdYWbMjGZkQVfl6DrbBmJGBWVD4Nl8tsAAAC/SURBVHicTcvZUsJAEIXhlqUzEwnCSQibgGJUQERcWKKCiEsQQRB9/2dhQgLFf9Xnq2qig8he0RjFWRNamJCsU0QeJoyw5FFKgUhjl2kp0Axk7KzKziEfQoE3FTcQVy87MK1j0q0SygFUcHJapQqfwQngHBd8STWuo3Hl7+Y1WuzQTVvc4u7+odPtoc/uI+GJnwfA8AUYvfIYBLyxfP8APj3Jky8fMHVZfM8kz3/U8AGLnMscXf5iC8DK+/sPrjXNzRa3WdIQyAAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<g id="Artboard 1" clip-path="url(#cp1)">
+		<use id="Armor_icon.psd" href="#img1" x="6" y="0"/>
+	</g>
+</svg>

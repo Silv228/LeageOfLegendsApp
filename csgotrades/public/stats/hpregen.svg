@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 75" width="52" height="52">
+	<title>Health_icon</title>
+	<defs>
+		<image  width="52" height="52" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAMAAABG8BK2AAAAAXNSR0IB2cksfwAAAVBQTFRFAAAA///MDFkM////DFoMEoISEoESEYASEX4SEX0SEXwREXsREHkREHgREHcREHYQEHUQEHMQD3IQD3EQD3APD28PD24PD20PDmwPDmsPDFwMDFsMEoMTDF0MEoUTDF4NEoYTDV8NEocTDWENDWANE4kTDWMNDWIN////E4oUDWQOE4wUDmUOE40UDmcODmYOE44UDmgOFJAUDmoPDmkOFJEVFJIVFJQVFJUVFZcWFZgWFZkWFZsWFZwWFp0XFp8XFqAXFqIXG8QdG8MdG8EcG8AcG78cGr0cGrwbGrsbGrkbGrgbGbcbGbUaGbQaGbMaGbEaGLAaGK4ZGK0ZGKwZGKoZF6kYF6cYF6YYF6UYF6MYG8UdHMcdHMgdHMkeHMoeHMweHc0eHc4eHc8eHdAfHdIfHdMfHtQfHtUfHtYgHtcgHtggHtkgH9ogH9wg/7+/oOGD0AAAAHB0Uk5TAAX/Av///////////////////////////////////////////////wH/////////////////////////////////////////////////////////////////////////////////////////////BL7bbXIAAAGzSURBVHicrdVVV8NAEAXgNrg7lEJxirtrcXd3d/3/bwyQlpRzIxdmX+/kO8lmd8bn+/vyGwn/eDq2Eg3D71aTlJySmpaekZmVnZObl19QWFRcEiiNqwiWiePGlCPHWhAKeXEqkGMtqPx2XJgq5FgLqj05Ncix5LV1puPM1CPnJw43fDlBcRqdmCbkxNLmsMVxYlqQE0tbvTptyImG7R1xjgPTiZxo2OXZ6UaOmfX0/nLsmT7kmFnAu9OPHIdNsFkDyOGZQeTwzBByeGYYOTwzghyeGUUOz4whh2fGkcMzEeTwzARyeGYSOfblU9Mzs3PzC4tLyyura+sbm1vbO7t7+weHR9CB8+Jz7hwrOMKcKDjCnCo4wpwpOMKcKzjCXCg4wlwqOMJcKTjCXCs4wtwoOMLcKjjC3Ck4wtwrOMI8KDjCPCo4wjwpOMI8KzjCvCg4wrwqOMK8KTgOkwE6/ICB78Mz8Lt4Bu4Pz8B95hn4v3gG/neegeeHZ+A55Bl4nnkG3guegfeLZ+A95Rl433kG9g2egf2HZ2Af4xnYD3kG9lWegf2ZZ2Cf5xk4L3gGzZ132+oPhSg/vfmsoqMAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Health_regeneration_icon.psd" href="#img1" x="15" y="0"/>
+</svg>

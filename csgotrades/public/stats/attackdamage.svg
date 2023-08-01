@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133 155" width="92" height="92">
+	<title>Champion_stats_ingame_02</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m0 0h133v155h-133z"/>
+		</clipPath>
+		<image  width="92" height="92" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIBAMAAACnw650AAAAAXNSR0IB2cksfwAAAA9QTFRFAAAA7I03////6pJC////5EPykAAAAAV0Uk5TAP8DNgHgMx/6AAABDklEQVR4nLWV2xHCMAwErQ50kwrogBLSf1WQkIdlnWQxA/pi8Hp1cQxqjRQAZd/3JVUIFWYG4VcQCpB8AaVHUBKhICrFroj+/Wh2D08kFBr9SpgxkdkVJBIGeREcQ0QwOy7RrRvuey+6m1qoF8n5SWwCsSJb7NEkgFLRCblECcRFMAy4CCaRchFcbCJCRYRCIgOFIi0k2qGZaFuZijZoKnovzUWoiGBebSC6ImWiCwruiIE0g86Vz616pJDai25rOaDht+dEZgBmUCtAmkLHCbYUWvcFTaHjBFsB0hxqriLRBPKMh5YK9PSMe8FsWkV/g2k3OvYqzNhtLUB8xs5Dj6JgVn/NcMQ2C5jORDq9AFHuVRUNLp4PAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<g id="Artboard 1" clip-path="url(#cp1)">
+		<use id="Attack_damage_icon.psd" href="#img1" x="30" y="10"/>
+	</g>
+</svg>

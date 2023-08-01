@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117 118" width="72" height="72">
+	<title>Champion_stats_ingame_02</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m0 0h117v118h-117z"/>
+		</clipPath>
+		<image  width="72" height="72" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIBAMAAACnw650AAAAAXNSR0IB2cksfwAAABhQTFRF/+SJAAAA/+SJ//9/f39///8A/OKK/39/kThwFAAAAAh0Uk5T/wDfAgIBQQKkoxQJAAABSklEQVR4nK3VzXHCMBAFYMmkAC0zuaMSKCEdhBIogf4vAaOV9+etpMngE5iP56c1Fimhg/QBzRLKK4gWkA1CyBmEnAHIBxH43idRMddEqNhmCLn6ABWP/Iz8tPyMygyJMyESQXEncSJEIkgvOgjaIhQG2WGiRiVrxEF1hFAQJY1go2JQMyeTnuXycaPnPGbDjmb0Q+IHPBh2aedKCoLs94dB9pBBdSEo/z9Ij+MLBfFtGS6NUXuLl9YQf3CFjRoaLy2naSNGotEFoJrmQWl/WsaN3mh21/ILzYJeSDYKUXu5P/3fsBIl/awFSDQK5n2g6wLi/QigowSFKHe0raAao77m4+l3aOuoxujOSGy1DvURU4wyo22A+s16xKhvUnrPRkFPdJNIG1613mrPMMj8bRRoDIIXM8jtowhdsKFo3LoFbkQhol9/pf34A6s7U++s21hoAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<g id="Artboard 1" clip-path="url(#cp1)">
+		<use id="Attack_speed_icon.psd" href="#img1" x="30" y="0"/>
+	</g>
+</svg>

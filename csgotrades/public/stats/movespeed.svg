@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 117" width="72" height="72">
+	<title>Champion_stats_ingame_02</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m0 0h114v117h-114z"/>
+		</clipPath>
+		<image  width="72" height="72" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAAXNSR0IB2cksfwAAALFQTFRF8ObS8efRAAAA8ebR9ezP////7uTS7+XR7+XR7ubN7+XR8ObS7+XS/+nU8OXS8ObS8OXR////8ObS7ubS8OTS8uXY8OXR7+XS7+bR7+XR8ObS7+bS8OfU7+TR7ePS7ubS8OfS8ObS8ObS7+XR8OHS/+XM8ObS7uTR8erV7+bR7+bR7+XR7NrI8ObS8eXR7+XR7+XR8OLU2tra7+XR7+XR7+XR7+bS8uXR8ObR8ObS8ObSHgqkdwAAADt0Uk5T/4EAXxsBfv7zH3aJ5AzgZqMDmo9EFNbluzLM9TZDS1xV+jPAEQq8ryXt7skOzXCZ2hIHyvxlwj34vvEqcCudAAAB/0lEQVR4nKWY51rCMBiFQwRE1LKVqjgouCdu7//C7CJtxpecpOdfS3mfvOQkbWEMTIuX2WlzU2BOp/xCd7e31wDU316/nx4cHAaDhFc3P4wGgaCaV3lmOAoBSV5lxgEgxavMxBukexnt2NQVg5fJjum/vzldlaPYoSDFS7cDQZqXZoeBZkfETFR2EGh2TM6psGNzMrEAUeOp29FXiB6SXpIdzem4vep21Kd9yKvI2AJCvYpMSBDuJUjG8z5eedI90zgeL688UZudaPH1ynJ6Zms2PB7GFrYlco5zLmxr7fIK9lpwC+gc5rAFt4D8vDLQsohyn/L04lUhE2nf8PXiUrNbFQfGlF4SSPQwwKsOqtZXgFcN1MyrAjX0EqCmXltQ5cWHQV4ZaJVGeK2vw7y4ukRgDlM5MijYSwHdBHvJoNu7YC8ZdB/uJYMewr1k0ONTsJcM4s8I58XMkac/cnNe1wio3XNy3giO0mx3I9UHfgI0Spwk48uaBuKxE2R8WdNBfOAkGeuogzbvLtDHJwTiS+eQzDdn/ay7ll8bCATUcoWB3LVMYggUVksTCKilTjJOAVDL/LXHCQJqKRINvi0gdy1r+fmlQUgtq/zNaRC2W4qkFSWfaoHdspaEBrlrKdnF9AM7fv/OMqVBQC0xEFBLEORTS0bsUkW8amn9J8Knlv9MMy1uRlhTZQAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<g id="Artboard 1" clip-path="url(#cp1)">
+		<use id="Movement_speed_icon.psd" href="#img1" x="30" y="0"/>
+	</g>
+</svg>

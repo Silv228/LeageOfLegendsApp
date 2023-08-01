@@ -1,0 +1,45 @@
+.headDescription {
+    display: grid;
+    grid-template-columns: 120px 330px;
+    gap: 10px 30px;
+}
+
+.firstInfo {
+    display: grid;
+    justify-items: center;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px 10px;
+    background: #203b2c;
+    justify-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid #868768;
+    padding-left: 20px;
+}
+
+.statValue {
+    margin-bottom: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #97a598;
+}
+
+.stat {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+    justify-self: start;
+    cursor: help;
+}
+
+.hint {
+    position: absolute;
+    overflow: hidden;
+    background: wheat;
+    cursor: help;
+}
