@@ -1,12 +1,11 @@
-import SideBar from './components/SideBar/SideBar'
-import './globals.css'
 import { Inter } from 'next/font/google'
+import SideBar from '../components/SideBar/SideBar'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'League Of Legends',
-  description: 'League Of Legends',
+  title: 'Champion',
+  description: 'Info Champion',
 }
 
 export default function RootLayout({
@@ -17,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={inter.className}>
-        <SideBar/>  
+        <SideBar />
         {children}
       </body>
     </html>

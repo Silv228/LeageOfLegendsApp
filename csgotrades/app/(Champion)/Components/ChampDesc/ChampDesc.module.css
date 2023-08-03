@@ -2,11 +2,16 @@
     display: grid;
     grid-template-columns: 120px 330px;
     gap: 10px 30px;
+    margin-bottom: 20px;
 }
 
 .firstInfo {
     display: grid;
     justify-items: center;
+}
+.name{
+    color: white;
+    font-weight: 700;
 }
 
 .stats {
@@ -42,4 +47,16 @@
     overflow: hidden;
     background: wheat;
     cursor: help;
+}
+.lore{
+    padding: 8px;
+    background: rgba(48, 48, 48, 0.685);
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 400;   
+    color: rgb(216, 204, 204);
+}
+.tags{
+    background: rgb(156, 156, 156);
+    text-align: center;
 }

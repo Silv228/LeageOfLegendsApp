@@ -1,0 +1,28 @@
+.spell{
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.sellIcon{
+    border: 2px solid #bcab8d;
+}
+.shortInfo{
+    display: grid;
+    grid-template-columns: 60px auto;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.spellName{
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.costInfo{
+    font-size: 15px;
+}
+.burnValues{
+    color: rgb(182, 171, 171);
+}
+.additionalyInfo{
+    color: rgb(116, 108, 108);;
+}

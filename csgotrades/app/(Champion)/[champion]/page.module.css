@@ -1,0 +1,30 @@
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    padding: 20px 0px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.description{
+    grid-column: 2/3;
+    padding: 20px 0px;
+}
+.spells{
+    grid-column: 2/3;
+    padding: 20px 30px;
+    background: rgba(48, 48, 48, 0.685);
+    color: rgb(216, 204, 204);
+    display: grid;
+    gap: 10px;
+    border-radius: 5px;
+}
+.skins{
+    grid-column: 2/3;
+    padding: 20px 30px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 120px auto 120px;
+    align-items: center;
+    gap: 15px;
+
+}

@@ -1,0 +1,14 @@
+.bar {
+    position: fixed;
+    background: rgb(61, 61, 61);
+    padding: 20px;
+    padding-left: 30px;
+    height: 100%;
+    color: azure;
+}
+
+.navigation {
+    list-style-type: none;
+    display: grid;
+    gap: 10px;
+}
