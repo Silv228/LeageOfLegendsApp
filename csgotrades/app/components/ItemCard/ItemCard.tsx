@@ -14,9 +14,7 @@ const ItemCard = ({ name, img, info, id, gold }: ItemsCardProps) => {
         <>
             <div className={styles.card} onClick={(e) => openInfo()}>
                 <Image alt={img} width={50} height={50} src={'http://ddragon.leagueoflegends.com/cdn/13.14.1/img/item/' + img} />
-                <div>{name}</div>
-                <div>{info}</div>
-                <div>{gold.total}</div>
+                <div className={styles.name}>{name}</div>
             </div>
 
             {

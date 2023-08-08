@@ -10,7 +10,7 @@ export default async function Home() {
   )
   let res: IItems = await data.json()
   const itemsArray = Object.entries(res.data).map(e => ({...e[1], id: e[0]})) 
-  const itemGrid = itemsArray.map(item => <ItemCard description = {item.description} into={item.into} id={item.id} info={item.plaintext} gold={item.gold} key={item.id} img={item.image.full} name = {item.name}/>) 
+  const itemGrid = itemsArray.map(item => {if (item.gold.total !== 0) return <ItemCard description = {item.description} into={item.into} id={item.id} info={item.plaintext} gold={item.gold} key={item.id} img={item.image.full} name = {item.name}/>}) 
   return (
     <main className={styles.main}>
       {itemGrid}
