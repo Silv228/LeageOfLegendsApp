@@ -1,9 +1,9 @@
 import { IResponse } from '@/interfaces/championsFull.interface'
-import ChampCard from '../components/ChampCard/ChampCard'
+import ChampCard from '../../components/ChampCard/ChampCard'
 import styles from './page.module.css'
 
 export default async function Home() {
-  const data = await fetch('http://ddragon.leagueoflegends.com/cdn/13.14.1/data/en_US/champion.json',
+  const data = await fetch('http://ddragon.leagueoflegends.com/cdn/13.14.1/data/ru_RU/champion.json',
     {
       method: 'GET'
     }

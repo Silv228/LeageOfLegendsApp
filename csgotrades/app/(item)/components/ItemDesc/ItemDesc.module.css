@@ -1,0 +1,52 @@
+.infoFull {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    width: 80%;
+    height: 80%;
+    padding: 10px;
+    overflow-y: auto;
+    left: 10%;
+    top: 10%;
+    border-radius: 5px;
+    color: aliceblue;
+    z-index: 2;
+}
+
+.headInfo {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.nameBlock {
+    display: grid;
+    grid-template-columns: 50px auto;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.plaintext {
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.label {
+    color: rgb(182, 188, 192);
+}
+
+.into {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+
+.majorLabel {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}

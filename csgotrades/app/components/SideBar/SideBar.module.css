@@ -3,12 +3,22 @@
     background: rgb(61, 61, 61);
     padding: 20px;
     padding-left: 30px;
+    padding-top: 50px;
     height: 100%;
     color: azure;
+    z-index: 100;
 }
 
 .navigation {
     list-style-type: none;
     display: grid;
     gap: 10px;
+}
+
+.menuIcon {
+    position: fixed;
+    z-index: 101;
+    cursor: pointer;
+    top: 10px;
+    left: 35px;
 }
