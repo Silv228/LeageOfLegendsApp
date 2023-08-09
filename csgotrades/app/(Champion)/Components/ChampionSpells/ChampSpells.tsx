@@ -17,7 +17,10 @@ const ChampSpells = ({ ChampKey, spells, partype, passive, ...props }: ChampSpel
         <div className={styles.spell} key={spell.id}>
             <div className={styles.spellName}>{spell.name} <span className={styles.additionalyInfo}>{buttons[i]}</span></div>
             <div className={styles.shortInfo}>
-                <Image onClick={() => setButton(buttons[i])} className={styles.sellIcon} width={60} height={60} alt={spell.id} src={'http://ddragon.leagueoflegends.com/cdn/13.14.1/img/spell/' + spell.image.full} />
+                <div className={styles.imgBlock}>
+                    <Image onClick={() => setButton(buttons[i])} className={styles.sellIcon} width={60} height={60} alt={spell.id} src={'http://ddragon.leagueoflegends.com/cdn/13.14.1/img/spell/' + spell.image.full} />
+                    <Image className={styles.labelPlay} src={'/play.svg'} width={12} height={12} alt='play' />
+                </div>
                 <div className={styles.costInfo}>
                     <div>Перезарядка <span className={styles.burnValues}>{spell.cooldownBurn}</span></div>
                     <div>{partype} <span className={styles.burnValues}>{spell.costBurn}</span></div>
@@ -40,9 +43,9 @@ const ChampSpells = ({ ChampKey, spells, partype, passive, ...props }: ChampSpel
                 {spellsArray}
             </div>
             {button &&
-                <div  className={styles.videoSpell}>
+                <div className={styles.videoSpell}>
                     <div onClick={() => setButton('')} className={styles.background}></div>
-                    <SpellVideo className={styles.video} ChampKey={toRightKey(ChampKey)} button={button}/>
+                    <SpellVideo className={styles.video} url={`https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${toRightKey(ChampKey)}/ability_${toRightKey(ChampKey)}_${button}1.webm`} />
                 </div>}
         </div>
 
