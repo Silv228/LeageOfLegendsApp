@@ -2,6 +2,7 @@
 import React from "react";
 import styles from './SpellDesc.module.css'
 import { SpellDescProps } from "./SpellDesc.props";
+import SpellVideo from "@/app/(Champion)/Components/SpellVideo/SpellVideo";
 
 const SpellDesc = ({ name, spellId, summonerLevel, description, cooldownBurn, rangeBurn }: SpellDescProps) => {
     return (
@@ -17,7 +18,7 @@ const SpellDesc = ({ name, spellId, summonerLevel, description, cooldownBurn, ra
                     <div>Дальность {rangeBurn}</div>
                 </div>
             </div>
-            <video className={styles.video} src={'mediaSummoners/' + spellId + '.webm'} controls />
+            <SpellVideo className={styles.video} url={'mediaSummoners/' + spellId + '.webm'} />
         </div>
     )
 }
