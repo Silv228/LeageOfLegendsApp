@@ -24,9 +24,9 @@ const ChampionPage = async ({ params }: { params: { champion: string } }) => {
     return (
         <div className={styles.wrapper} style={{ backgroundImage: 'url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + champ.data[params.champion].id + '_0.jpg)' }}>
             <ChampDesc className={styles.description} tags={tags} champData={champ.data[params.champion]} champion={params.champion} />
-            <ChampSpells className={styles.spells} partype={champ.data[params.champion].partype} spells={champ.data[params.champion].spells} passive={champ.data[params.champion].passive}/>
+            <ChampSpells className={styles.spells} ChampKey={champ.data[params.champion].key} partype={champ.data[params.champion].partype} spells={champ.data[params.champion].spells} passive={champ.data[params.champion].passive}/>
             <ChampSkins className={styles.skins} champion = {params.champion} skins = {champ.data[params.champion].skins}/>
-            {/* <>description</> 7/10 (tags and name & stats fo per level)
+            {/* <>description</> 8/10 (tags and name & stats fo per level)
             <>spells</> 8/10 (gif)
             <>scins</> 8/10 (border) */}
         </div>
