@@ -4,6 +4,7 @@ import { ChampSpellsProps } from "./ChampSpells.props"
 import { Spell } from "@/interfaces/champion.interface"
 import Image from "next/image"
 import styles from "./ChampSpells.module.css"
+import SpellVideo from "../SpellVideo/SpellVideo"
 
 const ChampSpells = ({ ChampKey, spells, partype, passive, ...props }: ChampSpellsProps) => {
     const buttons = ['Q', 'W', 'E', 'R']
@@ -27,7 +28,7 @@ const ChampSpells = ({ ChampKey, spells, partype, passive, ...props }: ChampSpel
         </div>
     ))
     return (
-        <div {...props}>
+        <div {...props} >
             <div >
                 <div className={styles.spell}>
                     <div className={styles.spellName}>{passive.name} <span className={styles.additionalyInfo}>Пассивное умение</span></div>
@@ -38,9 +39,11 @@ const ChampSpells = ({ ChampKey, spells, partype, passive, ...props }: ChampSpel
                 </div>
                 {spellsArray}
             </div>
-            {button && <div onClick={() => setButton('')} className={styles.videoSpell}>
-                <video style={{width: '60%'}} src={`https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${toRightKey(ChampKey)}/ability_${toRightKey(ChampKey)}_${button}1.webm`} controls />
-            </div>}
+            {button &&
+                <div  className={styles.videoSpell}>
+                    <div onClick={() => setButton('')} className={styles.background}></div>
+                    <SpellVideo className={styles.video} ChampKey={toRightKey(ChampKey)} button={button}/>
+                </div>}
         </div>
 
     )

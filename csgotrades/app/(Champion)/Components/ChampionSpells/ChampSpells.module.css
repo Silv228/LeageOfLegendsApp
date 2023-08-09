@@ -1,36 +1,59 @@
-.spell{
+.spell {
     border-top: 2px solid rgba(0, 0, 0, 0.3);
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.sellIcon{
+
+.sellIcon {
     border: 2px solid #bcab8d;
+    cursor: pointer;
 }
-.shortInfo{
+
+.shortInfo {
     display: grid;
     grid-template-columns: 60px auto;
     gap: 10px;
     margin-bottom: 10px;
 }
-.spellName{
+
+.spellName {
     font-size: 19px;
     font-weight: 500;
     margin-bottom: 5px;
 }
-.costInfo{
+
+.costInfo {
     font-size: 15px;
 }
-.burnValues{
+
+.burnValues {
     color: rgb(182, 171, 171);
 }
-.additionalyInfo{
-    color: rgb(116, 108, 108);;
+
+.additionalyInfo {
+    color: rgb(116, 108, 108);
 }
-.videoSpell{
+
+.videoSpell {
     position: fixed;
+    display: grid;
+    align-items: center;
+    justify-items: center;
     width: 100%;
     height: 100%;
-    top: 10%;
-    left: 20%;
-    z-index: 10;
+    top: 0;
+    left: 0;
+}
+.background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 8;
+}
+.video{
+    position: relative;
+    width: 60%;
+    z-index: 12;
 }
