@@ -1,7 +1,10 @@
-.video{
+.video {
     width: 100%;
+    position: relative;
+    z-index: 12;
 }
-.info{
+
+.info {
     display: grid;
     gap: 10px;
     background: rgba(255, 255, 255, 0.2);
@@ -9,12 +12,14 @@
     padding: 10px;
     margin-bottom: 10px;
 }
-.nameBlock{
+
+.nameBlock {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: baseline;
     gap: 15px;
 }
+
 .name {
     font-size: 20px;
     font-weight: 600;
