@@ -6,19 +6,21 @@ import SpellVideo from "@/app/(Champion)/Components/SpellVideo/SpellVideo";
 
 const SpellDesc = ({ name, spellId, summonerLevel, description, cooldownBurn, rangeBurn }: SpellDescProps) => {
     return (
-        <div>
+        <div className={styles.temp}>
             <div className={styles.info}>
                 <div className={styles.nameBlock}>
                     <div className={styles.name}>{name}</div>
-                    <div className={styles.lvl}>min lvl {summonerLevel}</div>
+                    <div className={styles.lvl}>Минимальный уровень {summonerLevel}</div>
                 </div>
                 <div className={styles.description}>{description}</div>
                 <div>
-                    <div>Перезарядка {cooldownBurn}</div>
-                    <div>Дальность {rangeBurn}</div>
+                    <div>Перезарядка <b>{cooldownBurn}</b></div>
+                    <div>Дальность <b>{rangeBurn}</b></div>
                 </div>
             </div>
-            <SpellVideo className={styles.video} url={'mediaSummoners/' + spellId + '.webm'} />
+            <div className={styles.video}>
+                <SpellVideo  url={'mediaSummoners/' + spellId + '.webm'} />
+            </div>
         </div>
     )
 }

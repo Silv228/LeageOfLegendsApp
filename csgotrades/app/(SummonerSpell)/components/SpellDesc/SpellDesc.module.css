@@ -1,7 +1,14 @@
+.temp {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100%;
+}
+
 .video {
     width: 100%;
     position: relative;
     z-index: 12;
+    align-self: flex-end;
 }
 
 .info {

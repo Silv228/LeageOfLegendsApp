@@ -1,8 +1,12 @@
-.main{
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    gap: 25px;
+.main {
     padding: 50px;
     padding-left: 150px;
     padding-top: 30px;
+}
+
+.summs {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 25px;
+    padding-bottom: 10px;
 }

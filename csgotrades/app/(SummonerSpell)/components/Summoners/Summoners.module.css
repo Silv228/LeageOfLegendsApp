@@ -1,14 +1,22 @@
 .summoners{
     display: grid;
     grid-template-columns: repeat(3,120px);
-    gap: 0px 10px;
+    gap: 40px 10px;
     text-align: center;
+    padding: 30px;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 160px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     justify-content: center;
+    align-content: start;
+    justify-self: start;
+    align-self: flex-start;
 }
 .spell{
     cursor: pointer;
+}
+.description{
+    height: 100%;
+    transition: all 1.5s;
 }

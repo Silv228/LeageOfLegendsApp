@@ -14,7 +14,7 @@ export default async function Home() {
   const spellsArray = Object.entries(res.data).map(e => ({ ...e[1], id: e[0] }))
   return (
     <main className={styles.main}>
-      <Summoners spellsArray={spellsArray}/>
+      <Summoners spellsArray={spellsArray} className={styles.summs}/>
     </main>
   )
 }
