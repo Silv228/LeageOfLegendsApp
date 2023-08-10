@@ -44,6 +44,11 @@
     grid-template-columns: auto auto;
     gap: 10px;
 }
+.from{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+}
 
 .majorLabel {
     margin-bottom: 10px;

@@ -8,8 +8,10 @@ export default async function Home() {
       method: 'GET'
     }
   )
+
   let res: IItems = await data.json()
   const itemsArray = Object.entries(res.data).map(e => ({ ...e[1], id: e[0] }))
+
   return (
     <main className={styles.main}>
       <ItemPage itemsArray={itemsArray} />

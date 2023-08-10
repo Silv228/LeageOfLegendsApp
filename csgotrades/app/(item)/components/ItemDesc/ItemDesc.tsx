@@ -51,6 +51,23 @@ const ItemDesc = ({ id, setInfoOpen, ...props }: ItemDescProps) => {
                         </div>
                     </>
                 }
+                {itemData.from &&
+                    <>
+                        <div className={styles.majorLabel}>Рецепт</div>
+                        <div className={styles.from}>
+                            {itemData.from.map((item) => (
+                                <div className={styles.nameBlock} key={item} onClick={(e) => { setStateId(item) }}>
+                                    <Image alt={item} width={50} height={50} src={'http://ddragon.leagueoflegends.com/cdn/13.14.1/img/item/' + item + '.png'} />
+                                    <div>
+                                        <div>{data && data.data[item].name}</div>
+                                        <div><span className={styles.label}>Стоимость</span> {data && data.data[item].gold.total}({data.data[item].gold.base})</div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </>
+                }
+
             </div>}
         </div>
     )
