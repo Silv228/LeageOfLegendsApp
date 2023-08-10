@@ -1,6 +1,7 @@
-import { IGold, ItemStat } from "@/interfaces/items.interface"
+import { IGold } from "@/interfaces/items.interface"
+import { DetailedHTMLProps, HtmlHTMLAttributes } from "react"
 
-export interface ItemsCardProps {
+export interface ItemsCardProps extends DetailedHTMLProps<HtmlHTMLAttributes<HTMLDivElement>, HTMLDivElement> {
     name: string
     img: string
     info: string

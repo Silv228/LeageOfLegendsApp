@@ -1,27 +1,15 @@
 .main {
-  display: grid;
-  grid-template-columns: repeat(7, 150px);
-  gap: 20px;
   padding: 40px;
-}
-
-@media (max-width: 768px) {
-  .main {
-    grid-template-columns: repeat(6, 150px);
-  }
 }
 
 @media (max-width: 450px) {
   .main {
-    grid-template-columns: repeat(5, 150px);
-    gap: 10px 0px;
     padding: 10px;
   }
 }
 
 @media (max-width: 320px) {
   .main {
-    grid-template-columns: repeat(3, 150);
     padding: 20px;
     padding-left: 25px;
   }

@@ -22,7 +22,7 @@ const ItemDesc = ({ id, setInfoOpen, ...props }: ItemDescProps) => {
     }, [])
 
     return (
-        <>
+        <div {...props}>
             {itemData && <div className={styles.infoFull} {...props}>
                 <div className={styles.headInfo} onClick={(e) => setInfoOpen(false)}>
                     <div className={styles.nameBlock}>
@@ -52,7 +52,7 @@ const ItemDesc = ({ id, setInfoOpen, ...props }: ItemDescProps) => {
                     </>
                 }
             </div>}
-        </>
+        </div>
     )
 }
 

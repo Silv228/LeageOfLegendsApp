@@ -1,6 +1,6 @@
 import styles from './page.module.css'
 import { IItems } from '@/interfaces/items.interface'
-import ItemCard from '../../components/ItemCard/ItemCard'
+import ItemPage from '../components/ItemPage/ItemPage'
 
 export default async function Home() {
   const data = await fetch('http://ddragon.leagueoflegends.com/cdn/13.14.1/data/ru_RU/item.json',
@@ -9,11 +9,10 @@ export default async function Home() {
     }
   )
   let res: IItems = await data.json()
-  const itemsArray = Object.entries(res.data).map(e => ({...e[1], id: e[0]})) 
-  const itemGrid = itemsArray.map(item => {if (item.gold.total !== 0) return <ItemCard description = {item.description} into={item.into} id={item.id} info={item.plaintext} gold={item.gold} key={item.id} img={item.image.full} name = {item.name}/>}) 
+  const itemsArray = Object.entries(res.data).map(e => ({ ...e[1], id: e[0] }))
   return (
     <main className={styles.main}>
-      {itemGrid}
+      <ItemPage itemsArray={itemsArray} />
     </main>
   )
 }

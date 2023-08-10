@@ -27,8 +27,7 @@ const ChampionPage = async ({ params }: { params: { champion: string } }) => {
             <ChampSpells className={styles.spells} ChampKey={champ.data[params.champion].key} partype={champ.data[params.champion].partype} spells={champ.data[params.champion].spells} passive={champ.data[params.champion].passive}/>
             <ChampSkins className={styles.skins} champion = {params.champion} skins = {champ.data[params.champion].skins}/>
             {/* <>description</> 8/10 (tags and name & stats fo per level)
-            <>spells</> 8/10 (gif)
-            <>scins</> 8/10 (border) */}
+ */}
         </div>
 
     )

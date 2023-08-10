@@ -36,7 +36,13 @@ module.exports = {
                 port: '',
                 pathname: '/cdn/img/champion/**'
             },
-            
+            {
+                protocol: 'http',
+                hostname: 'ddragon.leagueoflegends.com',
+                port: '',
+                pathname: '/cdn/img/perk-images/Styles/**'
+            },
+
         ],
     },
 }

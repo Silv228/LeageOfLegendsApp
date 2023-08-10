@@ -146,6 +146,7 @@ export interface ItemStat {
     maps: IMaps;
     stats: IStats;
     depth?: number;
+    id?: string
 }
 
 interface IGroup {
