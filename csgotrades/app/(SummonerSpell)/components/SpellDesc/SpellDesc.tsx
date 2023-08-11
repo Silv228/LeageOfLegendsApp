@@ -2,7 +2,7 @@
 import React from "react";
 import styles from './SpellDesc.module.css'
 import { SpellDescProps } from "./SpellDesc.props";
-import SpellVideo from "@/app/(Champion)/Components/SpellVideo/SpellVideo";
+import SpellVideo from "@/app/components/SpellVideo/SpellVideo";
 
 const SpellDesc = ({ name, spellId, summonerLevel, description, cooldownBurn, rangeBurn }: SpellDescProps) => {
     return (

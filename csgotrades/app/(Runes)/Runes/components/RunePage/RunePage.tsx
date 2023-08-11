@@ -8,7 +8,7 @@ import styles from './RunePage.module.css'
 const RunePage = ({ runes }: RunePageProps) => {
     const [runesArray, setRunesArray] = useState<ISlot[]>(runes[0].slots)
     const [info, setInfo] = useState<IRune>()
-    const [activeRune, setActiveRune] = useState<IRunes>()
+    const [activeRune, setActiveRune] = useState<IRunes>(runes[0])
     return (
         <div className={styles.page}>
             <div className={styles.runeNav}>

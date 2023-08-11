@@ -1,0 +1,82 @@
+.replay {
+    justify-self: end;
+    margin-bottom: 4px;
+}
+
+.toolBar {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    background: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: end;
+}
+
+.progressBar {
+    margin: auto;
+    grid-column: 1/-1;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+.slider:focus {
+    outline: none;
+}
+
+.slider::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    background: #000000;
+    cursor: pointer;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+.slider::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    background: #000000;
+    cursor: pointer;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+.slider::-ms-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    background: #000000;
+    cursor: pointer;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+.time {
+    color: black;
+    line-height: 5px;
+}

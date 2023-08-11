@@ -4,7 +4,7 @@ import { ChampSpellsProps } from "./ChampSpells.props"
 import { Spell } from "@/interfaces/champion.interface"
 import Image from "next/image"
 import styles from "./ChampSpells.module.css"
-import SpellVideo from "../SpellVideo/SpellVideo"
+import SpellVideo from "../../../components/SpellVideo/SpellVideo"
 
 const ChampSpells = ({ ChampKey, spells, partype, passive, ...props }: ChampSpellsProps) => {
     const buttons = ['Q', 'W', 'E', 'R']

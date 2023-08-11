@@ -8,7 +8,7 @@ const getRunes = async (): Promise<IRunes[]> => {
   })
   return data.json()
 }
-const Runes = async () => {
+async function Runes() {
   const runes: IRunes[] = await getRunes()
   return (
     <>

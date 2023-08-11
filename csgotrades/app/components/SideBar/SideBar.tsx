@@ -9,7 +9,9 @@ const SideBar = () => {
     const [isHidden, setIsHidden] = useState<boolean>(true)
     return (
         <div>
-            <Image className={styles.menuIcon} src={menu} width={30} height={30} alt="as" onClick={(e) => { setIsHidden(!isHidden) }} />
+            <div onClick={(e) => { setIsHidden(!isHidden); console.log('hello') }}>
+                <Image className={styles.menuIcon} src={menu} width={30} height={30} alt="menu"  />
+            </div>
             {isHidden && <div className={styles.bar}>
                 <ul className={styles.navigation}>
                     <li>

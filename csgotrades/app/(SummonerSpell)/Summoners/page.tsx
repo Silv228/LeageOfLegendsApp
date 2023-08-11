@@ -1,10 +1,8 @@
 import styles from './page.module.css'
 import { ISummoner } from '@/interfaces/summoners.interface'
-import Image from 'next/image'
-import SpellDesc from '../components/SpellDesc/SpellDesc'
 import Summoners from '../components/Summoners/Summoners'
 
-export default async function Home() {
+export default async function Spell() {
   const data = await fetch('http://ddragon.leagueoflegends.com/cdn/13.14.1/data/ru_RU/summoner.json',
     {
       method: 'GET'

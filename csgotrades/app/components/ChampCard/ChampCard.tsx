@@ -23,7 +23,7 @@ const ChampCard = ({ name, img, info, id }: ChampCardProps) => {
 
     return (
         <Link href={id} className={styles.card}>
-            <Image className={styles.img} alt={img} width={120} height={120} src={'http://ddragon.leagueoflegends.com/cdn/13.14.1/img/champion/' + img} />
+            <Image className={styles.img} alt={img} width={100} height={100} src={'http://ddragon.leagueoflegends.com/cdn/13.14.1/img/champion/' + img} />
             <div className={styles.name}>{name}</div>
             <div className={styles.info} onMouseLeave={(e: MouseEvent) => { setHint('') }} onClick={e => e.preventDefault()}>
                 <div className={styles.stats} onMouseOver={(e: MouseEvent) => showHint('Физический урон', e.pageY)} >
