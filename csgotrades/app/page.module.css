@@ -1,19 +1,20 @@
 .main {
   display: grid;
-  grid-template-columns: repeat(4, 300px);
-  gap: 20px;
+  grid-template-columns: repeat(5, 200px);
+  gap: 20px 50px;
   padding: 40px;
+  padding-top: 60px;
 }
 
 @media (max-width: 768px) {
   .main {
-    grid-template-columns: repeat(3, 300px);
+    grid-template-columns: repeat(4, 200px);
   }
 }
 
 @media (max-width: 450px) {
   .main {
-    grid-template-columns: repeat(2, 300px);
+    grid-template-columns: repeat(3, 200px);
     gap: 10px 0px;
     padding: 10px;
   }
@@ -21,7 +22,7 @@
 
 @media (max-width: 320px) {
   .main {
-    grid-template-columns: 300px;
+    grid-template-columns: 200px 200px;
     padding: 20px;
     padding-left: 25px;
   }

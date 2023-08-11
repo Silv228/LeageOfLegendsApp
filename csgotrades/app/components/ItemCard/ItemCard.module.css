@@ -2,7 +2,9 @@
     border-radius: 5px;
     border: 1px solid black;
     padding: 10px;
-    background-color: rgb(70, 65, 65);
+    background: linear-gradient(rgb(3, 3, 3), rgba(3, 3, 3, 0.9));
+    color: rgb(212, 212, 212);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
     z-index: 0;
     text-align: center;
     height: 100%;

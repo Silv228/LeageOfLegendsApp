@@ -1,6 +1,6 @@
 .infoFull {
     position: fixed;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.98);
     width: 80%;
     height: 80%;
     padding: 10px;
@@ -10,6 +10,7 @@
     border-radius: 5px;
     color: aliceblue;
     z-index: 2;
+    border: 2px solid rgb(163, 163, 163);
 }
 
 .headInfo {

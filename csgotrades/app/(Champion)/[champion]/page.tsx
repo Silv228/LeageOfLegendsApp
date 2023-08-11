@@ -4,13 +4,18 @@ import ChampDesc from "../Components/ChampDesc/ChampDesc";
 import styles from "./page.module.css"
 import ChampSpells from "../Components/ChampionSpells/ChampSpells";
 import ChampSkins from "../Components/ChampSkins/ChampSkins";
+import { notFound } from "next/navigation";
 
-const getChampionData = async (params: { champion: string }): Promise<IChampion> => {
+const getChampionData = async (params: { champion: string }) => {
     const data = await fetch('http://ddragon.leagueoflegends.com/cdn/13.14.1/data/ru_RU/champion/' + params.champion + '.json', {
         method: "GET"
     })
+    if (data.status !== 200) {
+        notFound()
+    }
     return data.json()
 }
+
 export async function translate(word: string): Promise<string> {
     const data = await fetch('http://ddragon.leagueoflegends.com/cdn/13.14.1/data/ru_RU/language.json', {
         method: "GET"
@@ -21,6 +26,7 @@ export async function translate(word: string): Promise<string> {
 
 const ChampionPage = async ({ params }: { params: { champion: string } }) => {
     const champ = await getChampionData(params)
+    console.log(champ)
     const tags = champ.data[params.champion].tags.map((tag: string) => translate(tag))
     return (
         <div className={styles.wrapper} style={{ backgroundImage: 'url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + champ.data[params.champion].id + '_0.jpg)' }}>
