@@ -11,7 +11,7 @@ jobs:
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
         registry: docker.pkg.github.com
-        name: docker.pkg.github.com/Silv228/csgoSkinsTrades/tree/main/lol-app
+        name: docker.pkg.github.com/Silv228/csgoSkinsTrades/tree/main/
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         tag: "develop"
