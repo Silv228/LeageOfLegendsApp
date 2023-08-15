@@ -1,15 +1,15 @@
 import styles from './page.module.css'
 import { IItems } from '@/interfaces/items.interface'
 import ItemPage from '../components/ItemPage/ItemPage'
+import { api } from '@/app/api/api'
+import { Metadata } from 'next'
 
+export const metadata: Metadata = {
+  title: 'Предметы Лиги Легенд',
+  description: 'Здесь собраны все предметы игры Лига Легенд'
+} 
 export default async function Home() {
-  const data = await fetch('http://ddragon.leagueoflegends.com/cdn/13.14.1/data/ru_RU/item.json',
-    {
-      method: 'GET'
-    }
-  )
-
-  let res: IItems = await data.json()
+  const res: IItems = await api.getItems()
   const itemsArray = Object.entries(res.data).map(e => ({ ...e[1], id: e[0] }))
 
   return (

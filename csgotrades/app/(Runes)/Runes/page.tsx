@@ -1,15 +1,15 @@
 import { IRunes } from "@/interfaces/runes.interface";
 import React from "react";
 import RunePage from "./components/RunePage/RunePage";
+import { api } from "@/app/api/api";
+import { Metadata } from "next";
 
-const getRunes = async (): Promise<IRunes[]> => {
-  const data = await fetch('http://ddragon.leagueoflegends.com/cdn/13.14.1/data/ru_RU/runesReforged.json', {
-    method: "GET"
-  })
-  return data.json()
-}
+export const metadata: Metadata = {
+  title: 'Руны Лиги Легенд',
+  description: 'В Лиге Легенд есть несколько видов рун, их 5, а именно: Доминирование, Вдохновение, Точность, Храбрость, Колдовство, они дают некоторые дополниельные показатели'
+} 
 async function Runes() {
-  const runes: IRunes[] = await getRunes()
+  const runes: IRunes[] = await api.getRunes()
   return (
     <>
       <RunePage runes={runes} />
