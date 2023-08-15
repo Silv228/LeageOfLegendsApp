@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./ItemDesc.module.css"
 import { ItemDescProps } from "./ItemDesc.props";
 import { IItems } from "@/interfaces/items.interface";
+import { api } from "@/app/api/api";
 
 const ItemDesc = ({ id, setInfoOpen, ...props }: ItemDescProps) => {
     const [data, setData] = useState<IItems>()
@@ -11,12 +12,7 @@ const ItemDesc = ({ id, setInfoOpen, ...props }: ItemDescProps) => {
     const itemData = data && data.data[stateId]
     useEffect(() => {
         const getData = async () => {
-            const data = await fetch('http://ddragon.leagueoflegends.com/cdn/13.14.1/data/ru_RU/item.json',
-                {
-                    method: 'GET'
-                }
-            )
-            setData(await data.json())
+            setData(await api.getItems())
         }
         getData()
     }, [])

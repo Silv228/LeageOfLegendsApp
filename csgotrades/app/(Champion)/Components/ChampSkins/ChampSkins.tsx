@@ -15,10 +15,10 @@ const ChampSkins = ({ skins, champion, ...props }: ChampSkinsProps) => {
             tempIndexArray.push(s.num)
         })
         setIndexArray(tempIndexArray)
-    }, [])
+    }, [skins])
     const skinsArray = skins.map((skin: Skin) => {
         return (
-            <div className={styles.skin}>
+            <div className={styles.skin} key={skin.id}>
                 <Image onClick={(e) => { setIsFullScreen(true) }} alt={skin.id} width={308} height={560} src={'http://ddragon.leagueoflegends.com/cdn/img/champion/loading/' + `${champion}_` + skin.num + '.jpg'} />
                 <div className={styles.skinName}>{skin.name}</div>
             </div>

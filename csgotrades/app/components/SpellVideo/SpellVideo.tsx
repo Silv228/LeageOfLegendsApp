@@ -2,7 +2,7 @@ import React, { MouseEvent, useEffect, useRef, useState } from "react";
 import styles from './SpellVideo.module.css'
 import { SpellVideoProps } from "./SpellVideo.props";
 import Image from "next/image";
-
+//баг - при открытии тулбара сбрасывается прогрессбар
 const SpellVideo = ({ url, ...props }: SpellVideoProps) => {
     const videoRef = useRef<HTMLVideoElement>(null)
     const [isPause, setIsPause] = useState<boolean>(false)

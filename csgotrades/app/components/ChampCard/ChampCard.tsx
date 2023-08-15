@@ -13,7 +13,7 @@ const ChampCard = ({ name, img, info, id }: ChampCardProps) => {
         return (
             new Array(5).fill(<Image height={24} width={24} alt='empty-def' src={'/info/' + key + '/empty.svg'} />).
                 fill(<Image height={24} width={24} alt='full-def' src={'/info/' + key + '/full.svg'} />, 0, Math.floor(value / 2)).
-                    fill((Math.floor(value / 2) !== value / 2) ? <Image height={24} width={24} alt='half-def' src={'/info/' + key + '/half.svg'} /> : <Image height={24} width={24} alt='empty-def' src={'/info/' + key + '/empty.svg'} />, Math.floor(value / 2), (Math.floor(value / 2) + 1))
+                fill((Math.floor(value / 2) !== value / 2) ? <Image height={24} width={24} alt='half-def' src={'/info/' + key + '/half.svg'} /> : <Image height={24} width={24} alt='empty-def' src={'/info/' + key + '/empty.svg'} />, Math.floor(value / 2), (Math.floor(value / 2) + 1))
         )
     }
     const showHint = (hintName: string, y: number) => {
@@ -22,7 +22,7 @@ const ChampCard = ({ name, img, info, id }: ChampCardProps) => {
     }
 
     return (
-        <Link href={id} className={styles.card}>
+        <Link href={`Champions/${id}`} className={styles.card}>
             <Image className={styles.img} alt={img} width={100} height={100} src={'http://ddragon.leagueoflegends.com/cdn/13.14.1/img/champion/' + img} />
             <div className={styles.name}>{name}</div>
             <div className={styles.info} onMouseLeave={(e: MouseEvent) => { setHint('') }} onClick={e => e.preventDefault()}>

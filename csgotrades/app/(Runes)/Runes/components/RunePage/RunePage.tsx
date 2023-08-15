@@ -13,7 +13,7 @@ const RunePage = ({ runes }: RunePageProps) => {
         <div className={styles.page}>
             <div className={styles.runeNav}>
                 {runes.map((rune) => (
-                    <div className={activeRune?.id === rune.id ? styles.active : ''} onClick={() => { setRunesArray(rune.slots); setInfo(undefined);setActiveRune(rune) }} key={rune.key}>
+                    <div className={activeRune?.id === rune.id ? styles.active : ''} onClick={() => { setRunesArray(rune.slots); setInfo(undefined); setActiveRune(rune) }} key={rune.key}>
                         <Image alt={rune.key} width={50} height={50} src={'http://ddragon.leagueoflegends.com/cdn/img/' + rune.icon} />
                         <div>{rune.name}</div>
                     </div>
@@ -22,9 +22,9 @@ const RunePage = ({ runes }: RunePageProps) => {
             <hr className={styles.divider} />
             <div className={styles.runesWrapper}>
                 <div className={styles.runesArea}>
-                    <div>{runesArray && runesArray.map((slot: ISlot) => (
-                        <div className={styles.runes}>{slot.runes.map((skill: IRune) => (
-                            <div className={info?.id === skill.id ? styles.active : ''} onClick={() => setInfo(skill)}>
+                    <div>{runesArray && runesArray.map((slot: ISlot, i: number) => (
+                        <div key={i} className={styles.runes}>{slot.runes.map((skill: IRune) => (
+                            <div key={skill.id} className={info?.id === skill.id ? styles.active : ''} onClick={() => setInfo(skill)}>
                                 <Image alt={skill.key} width={70} height={70} src={'http://ddragon.leagueoflegends.com/cdn/img/' + skill.icon} />
                             </div>
                         ))}
