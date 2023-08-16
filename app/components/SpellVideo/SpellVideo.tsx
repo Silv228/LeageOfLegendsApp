@@ -2,42 +2,38 @@ import React, { MouseEvent, useEffect, useRef, useState } from "react";
 import styles from './SpellVideo.module.css'
 import { SpellVideoProps } from "./SpellVideo.props";
 import Image from "next/image";
-//баг - при открытии тулбара сбрасывается прогрессбар
+
 const SpellVideo = ({ url, ...props }: SpellVideoProps) => {
     const videoRef = useRef<HTMLVideoElement>(null)
-    const [isPause, setIsPause] = useState<boolean>(false)
+    const [isPause, setIsPause] = useState<boolean>(true)
     const [isHideToolBar, setIsHideToolBar] = useState<boolean>(false)
     const [currentTime, setCurrentTime] = useState<number>(0)
     useEffect(() => {
-        setCurrentTime(0)
-        setIsHideToolBar(false)
-        return () => {
-            videoRef.current?.pause()
-        }
+        return (() => {
+            setCurrentTime(0)
+            setIsPause(true)
+        })
     }, [url])
     useEffect(() => {
         const timer = setInterval(() => {
-            isPause && setCurrentTime(currentTime + 1)
+            !isPause && setCurrentTime(currentTime + 1)
         }, 1000)
         return () => {
             clearInterval(timer)
         }
-    })
-    const changePause = (): void => {
-        setIsPause(!isPause)
-        if (isPause) {
+    }, [isPause, currentTime])
+    useEffect(() => {
+        if (isPause)
             videoRef.current?.pause()
-        }
-        else {
+        else
             videoRef.current?.play()
-        }
-    }
+    }, [isPause])
     const hideToolBar = (e: MouseEvent) => {
         e.preventDefault()
         setIsHideToolBar(!isHideToolBar)
     }
     const endVideo = () => {
-        setIsPause(false)
+        setIsPause(true)
         setCurrentTime(0)
         videoRef.current && (videoRef.current.currentTime = 0)
     }
@@ -50,21 +46,20 @@ const SpellVideo = ({ url, ...props }: SpellVideoProps) => {
     }
     const replay = () => {
         setCurrentTime(0)
-        setIsPause(true)
-        videoRef.current?.play()
+        setIsPause(false)
         videoRef.current && (videoRef.current.currentTime = 0)
     }
     return (
         <div {...props}>
-            <video onWaiting={() => setIsPause(false)} onPlaying={() => setIsPause(true)} onEnded={endVideo} onClick={(e: MouseEvent) => hideToolBar(e)} className={styles.video} ref={videoRef} style={{ width: '100%' }} src={url} />
-            {!isHideToolBar && <div className={styles.toolBar}>
+            <video onWaiting={() => setIsPause(true)} onPlaying={() => setIsPause(false)} onEnded={endVideo} onClick={(e: MouseEvent) => hideToolBar(e)} className={styles.video} ref={videoRef} style={{ width: '100%' }} src={url} />
+            <div className={`${styles.toolBar} ${isHideToolBar ? styles.hide : ''}`}>
                 <Image width={30} height={30} alt="replay" src={'/ui/replay.svg'} className={styles.replay} onClick={replay} />
-                <Image width={70} height={70} alt={isPause ? 'pause' : 'play'} src={`/ui/${isPause ? 'pause' : 'play'}.svg`} className={styles.play} onClick={changePause} />
+                <Image width={70} height={70} alt={!isPause ? 'pause' : 'play'} src={`/ui/${!isPause ? 'pause' : 'play'}.svg`} className={styles.play} onClick={() => setIsPause(!isPause)} />
                 <div className={styles.progressBar}>
                     <input className={styles.slider} type="range" onChange={(e) => goToTime(e.target.value)} value={currentTime} min={0} max={videoRef.current ? Math.round(videoRef.current?.duration) : 0} step={1} />
                     <span className={styles.time}>{toRightTime(currentTime)}/{toRightTime(Math.round(videoRef.current ? videoRef.current?.duration : 0))}</span>
                 </div>
-            </div>}
+            </div>
         </div>
     )
 }
