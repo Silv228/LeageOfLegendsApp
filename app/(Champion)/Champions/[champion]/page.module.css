@@ -31,26 +31,28 @@
     display: grid;
     grid-template-columns: 120px auto 120px;
     align-items: center;
-    gap: 15px;
-
+    gap: 15px;  
 }
 
 @media (max-width: 450px) {
     .wrapper {
-        background-size: cover;
-        background-repeat: no-repeat;
+        grid-template-columns: auto 1fr auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .skins {
+        grid-template-columns: 20px 1fr 20px;
+        padding: 10px;
+        justify-items: center;
+        gap: 0;
     }
 }
 
 @media (max-width: 320px) {
-    .bar {
-        display: grid;
-        gap: 40px;
-        grid-template-rows: repeat(auto-fit, 50px);
-        padding: 0;
-        padding-top: 60px;
-        width: 100%;
-        text-align: center;
-        font-size: 35px;
+    .wrapper {
+        grid-template-columns: auto 1fr auto;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }

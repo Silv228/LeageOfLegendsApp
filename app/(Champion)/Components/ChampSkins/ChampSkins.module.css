@@ -29,3 +29,15 @@
     cursor: pointer;
     z-index: 12;
 }
+@media (max-width: 768px) {}
+
+@media (max-width: 450px) {
+    .skin{
+        scale: 0.7;
+    }
+    .switchSkin {
+        scale: 0.6;
+    }
+}
+
+@media (max-width: 320px) {}
