@@ -8,10 +8,21 @@
     color: azure;
     z-index: 100;
 }
-.active{
+
+.active {
     font-weight: 800;
     color: rgb(142, 202, 255);
 }
+
+.menuIcon {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    cursor: pointer;
+    top: 10px;
+    left: 35px;
+}
+
 @media (max-width: 768px) {
     .bar {
         padding: 30px;
@@ -21,6 +32,11 @@
 }
 
 @media (max-width: 450px) {
+    .menuIcon {
+        display: block;
+        margin-left: -20px;
+    }
+
     .bar {
         padding: 0;
         padding-top: 60px;
@@ -47,12 +63,4 @@
     list-style-type: none;
     display: grid;
     gap: 10px;
-}
-
-.menuIcon {
-    position: fixed;
-    z-index: 1001;
-    cursor: pointer;
-    top: 10px;
-    left: 35px;
 }

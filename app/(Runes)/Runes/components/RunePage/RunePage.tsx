@@ -22,7 +22,8 @@ const RunePage = ({ runes }: RunePageProps) => {
             <hr className={styles.divider} />
             <div className={styles.runesWrapper}>
                 <div className={styles.runesArea}>
-                    <div>{runesArray && runesArray.map((slot: ISlot, i: number) => (
+                    <div className={styles.nameRuneMob}>{activeRune.name}</div>
+                    {runesArray && runesArray.map((slot: ISlot, i: number) => (
                         <div key={i} className={styles.runes}>{slot.runes.map((skill: IRune) => (
                             <div key={skill.id} className={info?.id === skill.id ? styles.active : ''} onClick={() => setInfo(skill)}>
                                 <Image alt={skill.key} width={70} height={70} src={'http://ddragon.leagueoflegends.com/cdn/img/' + skill.icon} />
@@ -30,13 +31,14 @@ const RunePage = ({ runes }: RunePageProps) => {
                         ))}
                         </div>
                     ))}
-                    </div>
                 </div>
                 {info && <div className={styles.info}>
                     <div className={styles.name}>{info.name}</div>
                     <div className={styles.description} dangerouslySetInnerHTML={{ __html: info.longDesc }} />
+                    <div className={styles.mobile} onClick={() => setInfo(undefined)}></div>
                 </div>}
             </div>
+            
         </div>
     )
 }
