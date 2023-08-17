@@ -17,6 +17,7 @@ const SideBar = () => {
     const [previousNav, setPreviousNav] = useState('Champions')
     const page = usePathname()
     useEffect(() => {
+        setIsHidden(true)
         let tempNav = navigationShowed
         tempNav[page?.slice(1, page.length)] = true
         tempNav[previousNav] = false
@@ -28,7 +29,7 @@ const SideBar = () => {
             <div onClick={(e) => setIsHidden(!isHidden)}>
                 <Image className={styles.menuIcon} src={menu} width={30} height={30} alt="menu" />
             </div>
-            {isHidden && <div className={styles.bar}>
+            <div className={`${styles.bar} ${isHidden ? styles.hiden : ''}`}>
                 <ul className={styles.navigation}>
                     <li className={navigationShowed.Champions ? styles.active : ''}>
                         <Link href={'/Champions'}>Чемпионы</Link>
@@ -43,7 +44,7 @@ const SideBar = () => {
                         <Link href={'/Summoners'}>Самонерки</Link>
                     </li>
                 </ul>
-            </div>}
+            </div>
         </div>
     )
 }
