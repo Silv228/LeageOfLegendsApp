@@ -19,6 +19,9 @@
 
 .switchSkin {
     cursor: pointer;
+    box-shadow: -5px 5px 5px rgb(0, 0, 0);
+}
+.switchNext{
     box-shadow: 5px 5px 5px rgb(0, 0, 0);
 }
 .splashSkin {
@@ -29,15 +32,12 @@
     cursor: pointer;
     z-index: 12;
 }
-@media (max-width: 768px) {}
-
 @media (max-width: 450px) {
     .skin{
         scale: 0.7;
     }
     .switchSkin {
         scale: 0.6;
+        z-index: 10;
     }
 }
-
-@media (max-width: 320px) {}
