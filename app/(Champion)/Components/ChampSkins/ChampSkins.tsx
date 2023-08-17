@@ -30,16 +30,19 @@ const ChampSkins = ({ skins, champion, ...props }: ChampSkinsProps) => {
         else setIndexSkin((indexSkin + action) % skins.length)
     }
     return (
-        <div className={styles.skins} {...props}>
-            <Image className={styles.switchSkin} alt={`${champion}_${indexArray && indexArray[-(-skins.length - (indexSkin - 1)) % skins.length]}`} width={120} height={120} src={'http://ddragon.leagueoflegends.com/cdn/img/champion/tiles/' + `${champion}_` + (indexArray && indexArray[-(-skins.length - (indexSkin - 1)) % skins.length]) + '.jpg'} onClick={(e: MouseEvent) => { switchSkin(-1) }} />
-            {skinsArray[indexSkin]}
-            <Image className={`${styles.switchSkin} ${styles.switchNext}`} alt={`${champion}_${indexArray && (indexArray[(indexSkin + 1) % (skins.length)])}`} width={120} height={120} src={'http://ddragon.leagueoflegends.com/cdn/img/champion/tiles/' + `${champion}_` + (indexArray && (indexArray[(indexSkin + 1) % (skins.length)])) + '.jpg'} onClick={(e: MouseEvent) => { switchSkin(1) }} />
+        <>
+            <div {...props}>
+                <Image className={styles.switchSkin} alt={`${champion}_${indexArray && indexArray[-(-skins.length - (indexSkin - 1)) % skins.length]}`} width={120} height={120} src={'http://ddragon.leagueoflegends.com/cdn/img/champion/tiles/' + `${champion}_` + (indexArray && indexArray[-(-skins.length - (indexSkin - 1)) % skins.length]) + '.jpg'} onClick={(e: MouseEvent) => { switchSkin(-1) }} />
+                {skinsArray[indexSkin]}
+                <Image className={`${styles.switchSkin} ${styles.switchNext}`} alt={`${champion}_${indexArray && (indexArray[(indexSkin + 1) % (skins.length)])}`} width={120} height={120} src={'http://ddragon.leagueoflegends.com/cdn/img/champion/tiles/' + `${champion}_` + (indexArray && (indexArray[(indexSkin + 1) % (skins.length)])) + '.jpg'} onClick={(e: MouseEvent) => { switchSkin(1) }} />
+
+            </div>
             {isFullScreen &&
                 <div className={styles.splashSkin}>
-                    <Image priority={true} alt={`splash_${champion}_` + (indexArray && indexArray[indexSkin])} width={1215} height={717} src={'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + `${champion}_` + (indexArray && indexArray[indexSkin]) + '.jpg'} onClick={(e) => { setIsFullScreen(false) }} />
+                    <Image fill={true} className={styles.splashImg} alt={`splash_${champion}_` + (indexArray && indexArray[indexSkin])}  src={'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/' + `${champion}_` + (indexArray && indexArray[indexSkin]) + '.jpg'} onClick={(e) => { setIsFullScreen(false) }} />
                 </div>
             }
-        </div>
+        </>
     )
 }
 

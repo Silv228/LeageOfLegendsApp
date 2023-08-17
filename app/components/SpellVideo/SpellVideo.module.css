@@ -13,10 +13,12 @@
     grid-template-columns: auto auto;
     align-items: end;
 }
-.hide{
+
+.hide {
     height: 0px;
     overflow: hidden;
 }
+
 .progressBar {
     margin: auto;
     grid-column: 1/-1;
