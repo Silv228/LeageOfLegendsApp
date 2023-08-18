@@ -56,3 +56,22 @@
     font-size: 18px;
     font-weight: 600;
 }
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 450px) {
+    .into {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 320px) {
+    .into {
+        grid-template-columns: 1fr;
+    }
+    .infoFull {
+        left: 6%;
+        top: 8%;
+    }
+}

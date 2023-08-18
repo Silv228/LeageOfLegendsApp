@@ -1,7 +1,8 @@
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(6, 150px);
+    grid-template-columns: repeat(auto-fit, 150px);
     gap: 40px 20px;
+    justify-content: center;
 }
 .background{
     position: absolute;
@@ -12,21 +13,19 @@
     background: rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 768px) {
-    .wrapper {
-        grid-template-columns: repeat(4, 150px);
-    }
+
 }
 
 @media (max-width: 450px) {
     .wrapper {
-        grid-template-columns: repeat(3, 150px);
         gap: 40px 10px;
     }
 }
 
 @media (max-width: 320px) {
     .wrapper {
-        grid-template-columns: repeat(3, 150px);
-        gap: 70px 20px;
+        grid-template-columns: repeat(auto-fit, 130px);
+        gap: 30px 10px;
+        font-size: 15px;
     }
 }
