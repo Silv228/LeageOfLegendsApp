@@ -9,20 +9,20 @@ import { usePathname } from "next/navigation"
 const SideBar = () => {
     const [isHidden, setIsHidden] = useState<boolean>(true)
     const [navigationShowed, setNavigationShowed] = useState<Record<string, boolean>>({
-        Champions: true,
-        Items: false,
-        Runes: false,
-        Summoners: false,
+        champions: true,
+        items: false,
+        runes: false,
+        summoners: false,
     })
     const [previousNav, setPreviousNav] = useState('champions')
     const page = usePathname()
     useEffect(() => {
         setIsHidden(true)
         let tempNav = navigationShowed
-        tempNav[page?.slice(1, page.length)] = true
+        tempNav[page?.slice(1, page.length).toLocaleLowerCase()] = true
         tempNav[previousNav] = false
         setNavigationShowed(tempNav)
-        setPreviousNav(page?.slice(1, page.length))
+        setPreviousNav(page?.slice(1, page.length).toLocaleLowerCase())
     }, [page])
     return (
         <div>
@@ -31,17 +31,17 @@ const SideBar = () => {
             </div>
             <div className={`${styles.bar} ${isHidden ? styles.hiden : ''}`}>
                 <ul className={styles.navigation}>
-                    <li className={navigationShowed.Champions ? styles.active : ''}>
-                        <Link href={'/champions'}>Чемпионы</Link>
+                    <li className={navigationShowed.champions ? styles.active : ''}>
+                        <Link href={'/Champions'}>Чемпионы</Link>
                     </li>
-                    <li className={navigationShowed.Items ? styles.active : ''}>
-                        <Link href={'/items'}>Предметы</Link>
+                    <li className={navigationShowed.items ? styles.active : ''}>
+                        <Link href={'/Items'}>Предметы</Link>
                     </li>
-                    <li className={navigationShowed.Runes ? styles.active : ''}>
-                        <Link href={'/runes'}>Руны</Link>
+                    <li className={navigationShowed.runes ? styles.active : ''}>
+                        <Link href={'/Runes'}>Руны</Link>
                     </li>
-                    <li className={navigationShowed.Summoners ? styles.active : ''}>
-                        <Link href={'/summoners'}>Самонерки</Link>
+                    <li className={navigationShowed.summoners ? styles.active : ''}>
+                        <Link href={'/Summoners'}>Самонерки</Link>
                     </li>
                 </ul>
             </div>
