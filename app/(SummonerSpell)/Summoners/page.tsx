@@ -1,6 +1,6 @@
 import styles from './page.module.css'
 import { ISummoner } from '@/interfaces/summoners.interface'
-import Summoners from '../components/Summoners/Summoners'
+import SummonersPage from '../components/SummonersPage/SummonersPage'
 import { api } from '@/app/api/api'
 import { Metadata } from 'next'
 
@@ -13,7 +13,7 @@ export default async function Spell() {
   const spellsArray = Object.entries(res.data).map(e => ({ ...e[1], id: e[0] }))
   return (
     <main className={styles.main}>
-      <Summoners spellsArray={spellsArray} className={styles.summs}/>
+      <SummonersPage spellsArray={spellsArray} className={styles.summs}/>
     </main>
   )
 }

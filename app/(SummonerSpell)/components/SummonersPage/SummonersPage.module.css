@@ -1,0 +1,54 @@
+.summoners {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    gap: 40px 10px;
+    text-align: center;
+    padding: 30px;
+    padding-top: 50px;
+    padding-bottom: 160px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    justify-content: center;
+    align-content: start;
+    justify-self: start;
+    align-self: flex-start;
+}
+
+.spell {
+    cursor: pointer;
+}
+
+.description {
+    height: 100%;
+    transition: all 1.5s;
+}
+
+@media (max-width: 450px) {
+    .summoners {
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, 120px);
+        gap: 30px 5px;
+        padding: 10px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        justify-self: center;
+        font-size: 15px;
+    }
+
+    .description {
+        width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .summoners {
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, 120px);
+        gap: 20px 5px;
+        padding: 5px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        justify-self: center;
+        font-size: 15px;
+    }
+}

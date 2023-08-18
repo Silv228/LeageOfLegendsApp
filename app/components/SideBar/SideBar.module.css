@@ -23,7 +23,7 @@
     left: 35px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .bar {
         padding: 30px;
         padding-left: 50px;
