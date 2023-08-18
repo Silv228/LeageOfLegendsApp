@@ -14,7 +14,7 @@ const SideBar = () => {
         Runes: false,
         Summoners: false,
     })
-    const [previousNav, setPreviousNav] = useState('Champions')
+    const [previousNav, setPreviousNav] = useState('champions')
     const page = usePathname()
     useEffect(() => {
         setIsHidden(true)
@@ -32,16 +32,16 @@ const SideBar = () => {
             <div className={`${styles.bar} ${isHidden ? styles.hiden : ''}`}>
                 <ul className={styles.navigation}>
                     <li className={navigationShowed.Champions ? styles.active : ''}>
-                        <Link href={'/Champions'}>Чемпионы</Link>
+                        <Link href={'/champions'}>Чемпионы</Link>
                     </li>
                     <li className={navigationShowed.Items ? styles.active : ''}>
-                        <Link href={'/Items'}>Предметы</Link>
+                        <Link href={'/items'}>Предметы</Link>
                     </li>
                     <li className={navigationShowed.Runes ? styles.active : ''}>
-                        <Link href={'/Runes'}>Руны</Link>
+                        <Link href={'/runes'}>Руны</Link>
                     </li>
                     <li className={navigationShowed.Summoners ? styles.active : ''}>
-                        <Link href={'/Summoners'}>Самонерки</Link>
+                        <Link href={'/summoners'}>Самонерки</Link>
                     </li>
                 </ul>
             </div>
