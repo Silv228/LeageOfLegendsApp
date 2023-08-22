@@ -1,16 +1,15 @@
 .main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
-  gap: 20px 50px;
+  grid-template-rows: auto 1fr;
   padding: 160px;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 40px;
-  justify-content: center;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
   .main {
-    padding: 20px;
+    padding: 15px;
   }
 }
 
@@ -23,5 +22,6 @@
 @media (max-width: 320px) {
   .main {
     padding: 5px;
+    padding-top: 12px;
   }
 }

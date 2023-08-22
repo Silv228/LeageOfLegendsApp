@@ -1,10 +1,15 @@
 .wrapper {
+    text-align: center;
+}
+
+.itemsGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, 150px);
     gap: 40px 20px;
     justify-content: center;
 }
-.background{
+
+.background {
     position: fixed;
     top: 0;
     left: 0;
@@ -12,18 +17,17 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
 }
-@media (max-width: 768px) {
 
-}
+@media (max-width: 768px) {}
 
 @media (max-width: 450px) {
-    .wrapper {
+    .itemsGrid {
         gap: 40px 10px;
     }
 }
 
 @media (max-width: 320px) {
-    .wrapper {
+    .itemsGrid {
         grid-template-columns: repeat(auto-fit, 130px);
         gap: 30px 10px;
         font-size: 15px;

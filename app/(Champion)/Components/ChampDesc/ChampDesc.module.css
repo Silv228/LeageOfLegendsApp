@@ -8,10 +8,12 @@
 .firstInfo {
     display: grid;
     justify-items: center;
+    background: rgba(80, 80, 80, 0.8);
+    border-radius: 5px;
 }
 
 .name {
-    color: white;
+    color: rgb(14, 14, 14);
     font-weight: 700;
 }
 
@@ -60,8 +62,9 @@
 }
 
 .tags {
-    background: rgb(156, 156, 156);
     text-align: center;
+    color: rgb(92, 92, 92);
+    font-weight: 500;
 }
 
 @media (max-width: 768px) {}
