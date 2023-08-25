@@ -14,7 +14,7 @@ export default async function Home() {
 
   return (
     <main className={styles.main}>
-      <ItemPage itemsArray={itemsArray} />
+      <ItemPage itemsObj={res.data} itemsArray={itemsArray} />
     </main>
   )
 }

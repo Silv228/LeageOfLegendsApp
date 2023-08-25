@@ -1,19 +1,19 @@
 'use client'
-import React, { MouseEvent, ReactNode, useState } from 'react'
+import React, { MouseEvent, ReactNode, memo, useState } from 'react'
 import Image from 'next/image'
 import styles from './ChampCard.module.css'
 import { ChampCardProps } from './ChampCard.props'
 import Link from 'next/link'
 
-const ChampCard = ({ name, img, info, id }: ChampCardProps) => {
+const ChampCard = memo(({ name, img, info, id }: ChampCardProps) => {
     const [hint, setHint] = useState<string>('')
     const [cursorPos, setCursorPos] = useState<number>(0)
 
     const convertToIcons = (key: string, value: number): Array<ReactNode> => {
         return (
-            new Array(5).fill(<Image height={24} width={24} alt='empty-def' src={'/info/' + key + '/empty.svg'} />).
-                fill(<Image height={24} width={24} alt='full-def' src={'/info/' + key + '/full.svg'} />, 0, Math.floor(value / 2)).
-                fill((Math.floor(value / 2) !== value / 2) ? <Image height={24} width={24} alt='half-def' src={'/info/' + key + '/half.svg'} /> : <Image height={24} width={24} alt='empty-def' src={'/info/' + key + '/empty.svg'} />, Math.floor(value / 2), (Math.floor(value / 2) + 1))
+            new Array(5).fill(<Image priority={false} loading="lazy" height={24} width={24} alt='empty-def' src={'/info/' + key + '/empty.svg'} />).
+                fill(<Image priority={false} loading="lazy" height={24} width={24} alt='full-def' src={'/info/' + key + '/full.svg'} />, 0, Math.floor(value / 2)).
+                fill((Math.floor(value / 2) !== value / 2) ? <Image priority={false} loading="lazy" height={24} width={24} alt='half-def' src={'/info/' + key + '/half.svg'} /> : <Image height={24} width={24} alt='empty-def' src={'/info/' + key + '/empty.svg'} />, Math.floor(value / 2), (Math.floor(value / 2) + 1))
         )
     }
     const showHint = (hintName: string, y: number) => {
@@ -23,7 +23,7 @@ const ChampCard = ({ name, img, info, id }: ChampCardProps) => {
 
     return (
         <Link href={`Champions/${id}`} className={styles.card}>
-            <Image className={styles.img} alt={img} width={100} height={100} src={'http://ddragon.leagueoflegends.com/cdn/13.14.1/img/champion/' + img} />
+            <Image loading="lazy" className={styles.img} alt={img} width={120} height={120} src={'http://ddragon.leagueoflegends.com/cdn/13.14.1/img/champion/' + img} />
             <div className={styles.name}>{name}</div>
             <div className={styles.info} onMouseLeave={(e: MouseEvent) => { setHint('') }} onClick={e => e.preventDefault()}>
                 <div className={styles.stats} onMouseOver={(e: MouseEvent) => showHint('Физический урон', e.pageY)} >
@@ -42,5 +42,5 @@ const ChampCard = ({ name, img, info, id }: ChampCardProps) => {
             </div>
         </Link>
     )
-}
+})
 export default ChampCard

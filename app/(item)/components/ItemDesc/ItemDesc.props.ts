@@ -5,4 +5,5 @@ export interface ItemDescProps extends DetailedHTMLProps<HtmlHTMLAttributes<HTML
     data?: ItemStat
     setInfoOpen: (isOpen: boolean) => void
     setId: (id: string) => void
+    itemsObj: Record<string, ItemStat>
 }

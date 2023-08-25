@@ -13,7 +13,10 @@ const Search = ({ data, setFindEl }: SearchProps) => {
     const changeHandler = (e) => {
         setSubword(e.target.value)
     }
-    setFindEl(state.showData)
+    useEffect(() => {
+        setFindEl(state.showData)
+    })
+
     return (
         <div className={styles.searhArea}>
             <input className={styles.searhInput} onChange={(e) => changeHandler(e)} placeholder="Поиск..." value={subword} />

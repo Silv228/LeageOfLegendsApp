@@ -4,6 +4,7 @@ import React, { useRef, useState } from "react";
 import SpellDesc from "../SpellDesc/SpellDesc";
 import styles from './SummonersPage.module.css'
 import { SummonerProps } from "./SummonersPage.props";
+import Card from "@/app/components/Card/Card";
 
 const SummonersPage = ({ spellsArray, ...props }: SummonerProps) => {
     const [spellId, setSpellId] = useState<string>('SummonerBarrier')
@@ -22,9 +23,9 @@ const SummonersPage = ({ spellsArray, ...props }: SummonerProps) => {
     })
     return (
         <div {...props}>
-            <div className={styles.summoners}>
+            <Card className={styles.summoners}>
                 {summonersArray}
-            </div>
+            </Card>
             <div ref={descRef} className={styles.description}>
                 <SpellDesc name={spell?.name ?? ''} summonerLevel={spell?.summonerLevel ?? 0} description={spell?.description ?? ''} cooldownBurn={spell?.cooldownBurn ?? ''} rangeBurn={spell?.rangeBurn ?? ''} spellId={spellId} />
             </div>

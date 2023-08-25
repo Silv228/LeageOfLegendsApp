@@ -11,6 +11,7 @@
     color: aliceblue;
     z-index: 102;
     border: 2px solid rgb(163, 163, 163);
+    text-align: start;
 }
 
 .headInfo {

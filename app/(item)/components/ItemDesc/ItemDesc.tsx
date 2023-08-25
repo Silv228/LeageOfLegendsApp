@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./ItemDesc.module.css"
 import { ItemDescProps } from "./ItemDesc.props";
 
-const ItemDesc = ({ data, setId, setInfoOpen, ...props }: ItemDescProps) => {
+const ItemDesc = ({ data, setId, setInfoOpen, itemsObj, ...props }: ItemDescProps) => {
     return (
         <div {...props}>
             {data && <div className={styles.infoFull} {...props}>
@@ -27,8 +27,8 @@ const ItemDesc = ({ data, setId, setInfoOpen, ...props }: ItemDescProps) => {
                                 <div className={styles.nameBlock} key={item} onClick={(e) => { setId(item) }}>
                                     <Image alt={item} width={50} height={50} src={'http://ddragon.leagueoflegends.com/cdn/13.14.1/img/item/' + item + '.png'} />
                                     <div>
-                                        <div>{data && data.name}</div>
-                                        <div><span className={styles.label}>Стоимость</span> {data && data.gold.total}({data.gold.base})</div>
+                                        <div>{itemsObj[item].name}</div>
+                                        <div><span className={styles.label}>Стоимость</span> {itemsObj[item].gold.total}({itemsObj[item].gold.base})</div>
                                     </div>
                                 </div>
                             ))}
@@ -43,8 +43,8 @@ const ItemDesc = ({ data, setId, setInfoOpen, ...props }: ItemDescProps) => {
                                 <div className={styles.nameBlock} key={item} onClick={(e) => { setId(item) }}>
                                     <Image alt={item} width={50} height={50} src={'http://ddragon.leagueoflegends.com/cdn/13.14.1/img/item/' + item + '.png'} />
                                     <div>
-                                        <div>{data && data.name}</div>
-                                        <div><span className={styles.label}>Стоимость</span> {data && data.gold.total}({data.gold.base})</div>
+                                        <div>{itemsObj[item].name}</div>
+                                        <div><span className={styles.label}>Стоимость</span> {itemsObj[item].gold.total}({itemsObj[item].gold.base})</div>
                                     </div>
                                 </div>
                             ))}

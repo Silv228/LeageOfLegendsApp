@@ -6,7 +6,7 @@
 
 .summs {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 2fr;
     gap: 25px;
     padding-bottom: 10px;
 }
@@ -17,7 +17,8 @@
     }
 
     .summs {
-        gap: 15px;
+        grid-template-columns: 1fr;
+        justify-items: center;
     }
 }
 

@@ -6,7 +6,6 @@
     padding: 30px;
     padding-top: 50px;
     padding-bottom: 160px;
-    background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     justify-content: center;
     align-content: start;
@@ -19,8 +18,25 @@
 }
 
 .description {
-    height: 100%;
     transition: all 1.5s;
+}
+
+@media (max-width: 900px) {
+    .summoners {
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, 120px);
+        gap: 30px 20px;
+        padding: 0px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        justify-self: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .description {
+        width: 100%;
+    }
 }
 
 @media (max-width: 450px) {
