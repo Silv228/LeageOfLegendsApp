@@ -4,13 +4,14 @@ import { searchReducer } from "./searchReducer";
 import { SearchProps } from "./Search.props";
 import styles from "./Search.module.css"
 
-const Search = ({ data, setFindEl }: SearchProps) => {
+const Search = ({ data, setFindEl, setPage }: SearchProps) => {
     const [subword, setSubword] = useState<string>('')
     const [state, dispatch] = useReducer(searchReducer, { data: data, showData: [] })
     useEffect(() => {
         dispatch({ word: subword })
     }, [subword])
     const changeHandler = (e) => {
+        setPage(1)
         setSubword(e.target.value)
     }
     useEffect(() => {

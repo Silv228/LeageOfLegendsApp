@@ -12,7 +12,7 @@ export default async function Spell() {
   const res: ISummoner = await api.getSummonersSpell()
   const spellsArray = Object.entries(res.data).map(e => ({ ...e[1], id: e[0] }))
   return (
-    <main className={styles.main}>
+    <main className={styles.main}>   
       <SummonersPage spellsArray={spellsArray} className={styles.summs}/>
     </main>
   )

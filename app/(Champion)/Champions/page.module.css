@@ -1,6 +1,6 @@
 .main {
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr auto;
   padding: 160px;
   padding-top: 20px;
   padding-bottom: 40px;

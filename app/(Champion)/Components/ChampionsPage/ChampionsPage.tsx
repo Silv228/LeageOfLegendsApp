@@ -5,16 +5,20 @@ import { IChampionShort } from "@/interfaces/championsFull.interface";
 import React, { useState } from "react";
 import { ChampionsPageProps } from "./ChampionsPage.props";
 import styles from "./ChampionsPage.module.css"
+import Pagination from "@/app/components/Pagination/Pagination";
 
 const ChampionsPage = ({ champArray }: ChampionsPageProps) => {
     const [champs, setChamps] = useState<IChampionShort[]>(champArray)
-    const champGrid = champs.map((champ) => <ChampCard id={champ.id} info={champ.info} key={champ.key} img={champ.image.full} name={champ.name} />)
+    const [page, setPage] = useState(1)
+    const countItem = 10    
+    const champGrid = champs.slice((page - 1) * countItem, page * countItem).map((champ) => <ChampCard id={champ.id} info={champ.info} key={champ.key} img={champ.image.full} name={champ.name} />)
     return (
         <div>
-            <Search data={champArray} setFindEl={setChamps} />
+            <Search setPage={setPage} data={champArray} setFindEl={setChamps} />
             <div className={styles.grid}>
                 {champGrid}
             </div>
+            {(Math.ceil(champs.length / countItem) > 1) && <Pagination setPage={setPage} maxPage ={Math.ceil(champs.length / countItem)} page={page} />}
         </div>
     )
 }
