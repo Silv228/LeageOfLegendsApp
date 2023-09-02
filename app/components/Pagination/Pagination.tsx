@@ -1,15 +1,43 @@
-import React, { ReactNode } from "react";
+'use client'
+import React, { ReactNode, useEffect, useState } from "react";
 import { PaginationProps } from './Pagination.props'
 import styles from './Pagination.module.css'
 
-const Pagination = ({ page, maxPage, setPage }: PaginationProps) => {
+const Pagination = ({ page, maxPage, setPage, type = 'full' }: PaginationProps) => {
     let pages: ReactNode[] = []
-    for(let i = 1; i <= maxPage; i++) {
+    const [initPage, setInitPage] = useState(1)
+    const [lenPages, setLenPages] = useState(maxPage - 1)
+    for (let i = initPage; (i < initPage + lenPages) && (i < maxPage); i++) {
         pages.push(<div className={`${styles.pageNum} ${i === page ? styles.activePage : ''}`} onClick={() => setPage(i)} key={i}>{i}</div>)
     }
+    const pagesStructure = (pagesCount: number) => {
+        if (page + pagesCount <= maxPage) {
+            setInitPage(page)
+            setLenPages(pagesCount)
+        }
+        else {
+            setInitPage(maxPage - pagesCount)
+            setLenPages(maxPage - 1)
+        }
+    }
+    useEffect(() => {
+        switch (type) {
+            case 'medium':
+                pagesStructure(7)
+                break;
+            case 'short':
+                pagesStructure(5)
+                break;
+            default:
+                break;
+        }
+    })
     return (
         <div className={styles.paginator}>
-            {pages}
+            <button disabled={page === 1} className={styles.pageNav} onClick={() => setPage(page - 1)}>{"<"}</button>
+            {pages} {(initPage + lenPages) < maxPage && <>&nbsp;</>}
+            <div className={`${styles.pageNum} ${page === maxPage ? styles.activePage : ''}`} onClick={() => setPage(maxPage)}>{maxPage}</div>
+            <button disabled={page === maxPage} className={styles.pageNav} onClick={() => setPage(page + 1)}>{">"}</button>
         </div>
     )
 }

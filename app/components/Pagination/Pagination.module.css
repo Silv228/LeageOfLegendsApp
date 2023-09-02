@@ -16,9 +16,28 @@
     border-radius: 5px;
     box-shadow: 2px 2px 5px black;
 }
+
 .pageNum:hover {
     box-shadow: 0px 0px 2px black;
 }
+
 .activePage {
     background: rgb(110, 141, 146);
+}
+
+.pageNav {
+    background: rgb(161, 161, 161);
+    cursor: pointer;
+    width: 30px;
+    padding-top: 2px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pageNav:disabled {
+    cursor:auto;
+    background: rgb(209, 209, 209);
 }
