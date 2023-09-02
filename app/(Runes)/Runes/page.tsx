@@ -1,7 +1,7 @@
 import { IRunes } from "@/interfaces/runes.interface";
 import React from "react";
 import RunePage from "./components/RunePage/RunePage";
-import { api } from "@/app/api/api";
+import { api } from "@/app/myApi/api";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

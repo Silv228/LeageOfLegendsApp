@@ -1,5 +1,4 @@
 import { notFound } from 'next/navigation';
-import { IResponse } from './../../interfaces/championsFull.interface';
 import { IRunes } from '@/interfaces/runes.interface';
 
 export const api = {

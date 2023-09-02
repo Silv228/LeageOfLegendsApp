@@ -4,14 +4,14 @@ import styles from "./page.module.css"
 import ChampSpells from "../../Components/ChampionSpells/ChampSpells";
 import ChampSkins from "../../Components/ChampSkins/ChampSkins";
 import { IResponse } from "@/interfaces/championsFull.interface";
-import { api } from "@/app/api/api";
+import { api } from "@/app/myApi/api";
 import { Metadata } from "next";
 import { IChampion } from "@/interfaces/champion.interface";
 
 export async function generateStaticParams() {
     const champs: IResponse = await fetch('http://ddragon.leagueoflegends.com/cdn/13.14.1/data/ru_RU/champion.json').then((res) => res.json())
     return (Object.keys(champs.data).map((cham) => ({
-        champion: cham
+        champion: cham,
     })))
 }
 async function translate(word: string) {

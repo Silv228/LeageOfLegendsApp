@@ -1,6 +1,7 @@
+import React from 'react'
 import { IResponse } from '@/interfaces/championsFull.interface'
 import styles from './page.module.css'
-import { api } from '@/app/api/api'
+import { api } from '@/app/myApi/api'
 import { Metadata } from 'next'
 import ChampionsPage from '../Components/ChampionsPage/ChampionsPage'
 

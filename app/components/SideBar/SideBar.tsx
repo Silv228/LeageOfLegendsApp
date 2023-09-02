@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link"
-import Reacts, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import styles from "./SideBar.module.css"
 import Image from "next/image"
 import menu from './menu.svg'

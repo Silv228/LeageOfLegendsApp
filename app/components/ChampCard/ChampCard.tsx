@@ -1,5 +1,5 @@
 'use client'
-import React, { MouseEvent, ReactNode, memo, useState } from 'react'
+import React, { MouseEvent, ReactNode, useState } from 'react'
 import Image from 'next/image'
 import styles from './ChampCard.module.css'
 import { ChampCardProps } from './ChampCard.props'

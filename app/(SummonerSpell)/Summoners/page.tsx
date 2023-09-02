@@ -1,7 +1,7 @@
 import styles from './page.module.css'
 import { ISummoner } from '@/interfaces/summoners.interface'
 import SummonersPage from '../components/SummonersPage/SummonersPage'
-import { api } from '@/app/api/api'
+import { api } from '@/app/myApi/api'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {

@@ -1,7 +1,7 @@
 import styles from './page.module.css'
 import { IItems } from '@/interfaces/items.interface'
 import ItemPage from '../components/ItemPage/ItemPage'
-import { api } from '@/app/api/api'
+import { api } from '@/app/myApi/api'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
