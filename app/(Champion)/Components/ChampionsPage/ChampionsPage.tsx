@@ -18,7 +18,7 @@ const ChampionsPage = ({ champArray }: ChampionsPageProps) => {
             <div className={styles.grid}>
                 {champGrid}
             </div>
-            {(Math.ceil(champs.length / countItem) > 1) && <Pagination setPage={setPage} maxPage ={Math.ceil(champs.length / countItem)} page={page} />}
+            {(Math.ceil(champs.length / countItem) > 1) && <Pagination setPage={setPage} maxPage ={Math.ceil(champs.length / countItem)} page={page} type={window.innerWidth < 600 ? "short" : window.innerWidth <= 1080 ? "medium" : "full"}/>}
         </div>
     )
 }
