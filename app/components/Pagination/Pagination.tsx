@@ -26,7 +26,10 @@ const Pagination = ({ page, maxPage, setPage, type = 'full' }: PaginationProps) 
                 pagesStructure(7)
                 break;
             case 'short':
-                pagesStructure(5)
+                pagesStructure(3)
+                break;
+            case 'full':
+                pagesStructure(maxPage - 1)
                 break;
             default:
                 break;

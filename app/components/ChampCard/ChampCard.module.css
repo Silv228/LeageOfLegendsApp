@@ -1,5 +1,5 @@
 .card {
-    width: 100%;
+    width: 90%;
     border-radius: 5px;
     display: grid;
     grid-template-rows: 1fr 10px;
