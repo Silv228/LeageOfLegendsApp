@@ -5,7 +5,7 @@ import styles from './ChampCard.module.css'
 import { ChampCardProps } from './ChampCard.props'
 import Link from 'next/link'
 
-const ChampCard = memo(({ name, img, info, id }: ChampCardProps) => {
+const ChampCard = ({ name, img, info, id }: ChampCardProps) => {
     const [hint, setHint] = useState<string>('')
     const [cursorPos, setCursorPos] = useState<number>(0)
 
@@ -42,5 +42,5 @@ const ChampCard = memo(({ name, img, info, id }: ChampCardProps) => {
             </div>
         </Link>
     )
-})
+}
 export default ChampCard

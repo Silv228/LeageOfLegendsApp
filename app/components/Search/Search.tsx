@@ -11,7 +11,7 @@ const Search = ({ data, setFindEl, setPage }: SearchProps) => {
         dispatch({ word: subword })
     }, [subword])
     const changeHandler = (e) => {
-        setPage(1)
+        setPage && setPage(1)
         setSubword(e.target.value)
     }
     useEffect(() => {
