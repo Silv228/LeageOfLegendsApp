@@ -16,7 +16,7 @@ const Pagination = ({ page, maxPage, setPage, type = 'full' }: PaginationProps) 
             setLenPages(pagesCount)
         }
         else {
-            setInitPage(maxPage - pagesCount)
+            setInitPage(Math.max(1, maxPage - pagesCount))
             setLenPages(maxPage - 1)
         }
     }

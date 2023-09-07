@@ -1,23 +1,17 @@
 'use client'
-import React, { useEffect, useReducer, useState } from "react";
-import { searchReducer } from "./searchReducer";
+import React, { useEffect, useState } from "react";
 import { SearchProps } from "./Search.props";
 import styles from "./Search.module.css"
 
 const Search = ({ data, setFindEl, setPage }: SearchProps) => {
     const [subword, setSubword] = useState<string>('')
-    const [state, dispatch] = useReducer(searchReducer, { data: data, showData: [] })
     useEffect(() => {
-        dispatch({ word: subword })
+        setFindEl(data.filter((el) => el.name.toLowerCase().includes(subword.toLowerCase())))
     }, [subword])
     const changeHandler = (e) => {
         setPage && setPage(1)
         setSubword(e.target.value)
     }
-    useEffect(() => {
-        setFindEl(state.showData)
-    })
-
     return (
         <div className={styles.searhArea}>
             <input className={styles.searhInput} onChange={(e) => changeHandler(e)} placeholder="Поиск..." value={subword} />

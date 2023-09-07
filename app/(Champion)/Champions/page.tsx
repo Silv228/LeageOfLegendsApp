@@ -3,7 +3,7 @@ import { IResponse } from '@/interfaces/championsFull.interface'
 import styles from './page.module.css'
 import { api } from '@/app/myApi/api'
 import { Metadata } from 'next'
-import ChampionsPage from '../Components/ChampionsPage/ChampionsPage'
+import ChampionsPageContainer from '../Components/ChampionsPage/ChampionsPageContainer'
 
 export const metadata: Metadata = {
   title: 'Чемпионы Лиги Легенд',
@@ -14,7 +14,7 @@ export default async function Champions() {
   const champArray = Object.entries(res.data).map(e => (e[1]))
   return (
     <main className={styles.main}>
-      <ChampionsPage champArray={champArray} />
+      <ChampionsPageContainer champArray={champArray} />
     </main>
   )
 }

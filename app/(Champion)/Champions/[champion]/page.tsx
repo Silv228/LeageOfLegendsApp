@@ -7,19 +7,13 @@ import { IResponse } from "@/interfaces/championsFull.interface";
 import { api } from "@/app/myApi/api";
 import { Metadata } from "next";
 import { IChampion } from "@/interfaces/champion.interface";
+import { translate } from "@/app/helpers/translate";
 
 export async function generateStaticParams() {
     const champs: IResponse = await fetch('http://ddragon.leagueoflegends.com/cdn/13.14.1/data/ru_RU/champion.json').then((res) => res.json())
     return (Object.keys(champs.data).map((cham) => ({
         champion: cham,
     })))
-}
-async function translate(word: string) {
-    const data = await fetch('http://ddragon.leagueoflegends.com/cdn/13.14.1/data/ru_RU/language.json', {
-        method: "GET"
-    })
-    const res = await data.json()
-    return (res.data[word] + ' ')
 }
 export async function generateMetadata({ params }: { params: { champion: string } }): Promise<Metadata> {
     const champ: IChampion = await api.getChampionData(params.champion)
