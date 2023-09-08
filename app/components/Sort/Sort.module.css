@@ -1,0 +1,19 @@
+.filters{
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    right: 0px;
+}
+.filterItem{
+    background: gray; 
+    cursor: pointer;
+}
+.filterIcon{
+    cursor: pointer;
+}
+.hideFilters{
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
