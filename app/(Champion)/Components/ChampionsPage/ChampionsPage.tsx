@@ -7,6 +7,7 @@ import { ChampionsPageProps } from "./ChampionsPage.props";
 import styles from "./ChampionsPage.module.css"
 import Pagination from "@/app/components/Pagination/Pagination";
 import Sort from "@/app/components/Sort/Sort";
+import Header from "@/app/components/Header/Header";
 
 const ChampionsPage = ({ champArray, initChampArray, setChampArr }: ChampionsPageProps) => {
     const [champs, setChamps] = useState<IChampionShort[]>(champArray)
@@ -21,10 +22,10 @@ const ChampionsPage = ({ champArray, initChampArray, setChampArr }: ChampionsPag
     }, [champArray])
     return (
         <>
-            <div className={styles.header}>
+            <Header>
                 <Search setPage={setPage} data={champArray} setFindEl={setChamps} />
                 <Sort setData={setChampArr} resetValue={'Все'} sortedData={initChampArray} sortedKeys={['Все', 'Mage', 'Assassin', 'Marksman', 'Tank', 'Support', 'Fighter']} />
-            </div>
+            </Header>
             <div className={styles.grid}>
                 {champs.slice((page - 1) * countItem, page * countItem).map((champ) => <ChampCard id={champ.id} info={champ.info} key={champ.key} img={champ.image.full} name={champ.name} />)}
             </div>

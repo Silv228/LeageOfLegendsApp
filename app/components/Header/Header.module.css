@@ -1,0 +1,9 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-items: end;
+    position: relative;
+    gap: 15px;
+    justify-self: center;
+    margin-left: 50px;
+}

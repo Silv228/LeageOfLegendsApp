@@ -6,6 +6,7 @@ import { ItemPageProps } from './ItemPage.props'
 import ItemCard from '@/app/components/ItemCard/ItemCard'
 import Search from '@/app/components/Search/Search'
 import Sort from '@/app/components/Sort/Sort'
+import Header from '@/app/components/Header/Header'
 
 const ItemPage = ({ itemsArray, tags, itemsObj, setItemsArray, initItemsArray }: ItemPageProps) => {
     const [infoOpen, setInfoOpen] = useState<boolean>(false)
@@ -16,10 +17,10 @@ const ItemPage = ({ itemsArray, tags, itemsObj, setItemsArray, initItemsArray }:
     }, [itemsArray])
     return (
         <div className={styles.wrapper}>
-            <div className={styles.header}>
+            <Header>
                 <Search data={itemsArray} setFindEl={setItems} />
                 <Sort resetValue='Все' sortedKeys={['Все', ...tags]} sortedData={initItemsArray} setData={setItemsArray} />
-            </div>
+            </Header>
             <div className={styles.itemsGrid}>
                 {items.map((item) => { if (item.gold.total > 0) return <ItemCard onClick={() => { setInfoOpen(true); setId(item.id) }} description={item.description} into={item.into} id={item.id ?? ''} info={item.plaintext} gold={item.gold} key={item.id} img={item.image.full} name={item.name} /> })}
             </div>
