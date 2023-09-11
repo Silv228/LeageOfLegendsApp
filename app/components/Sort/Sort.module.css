@@ -1,19 +1,48 @@
-.filters{
+.filters {
     position: absolute;
-    border: 1px solid black;
+    border: 1px solid rgb(214, 214, 214);
     border-radius: 5px;
     padding: 5px;
-    right: 0px;
+    right: -30px;
+    display: grid;
+    gap: 2px;
+    background: rgb(77, 77, 77);
+    max-height: 200px;
+    overflow: auto;
+    z-index: 1000;
+    text-align: center;
 }
-.filterItem{
-    background: gray; 
+.filters::-webkit-scrollbar {
+    width: 5px;
+    background-color: #141414;
+    border-radius: 5px;
+}
+.filters::-webkit-scrollbar-thumb {
+    background-color: #223c50;
+    border-radius: 5px;
+}
+
+.filterItem {
+    background: rgb(0, 0, 0);
+    border-radius: 2px;
+    color: aliceblue;
+    cursor: pointer;
+    border: 1px solid black;
+    box-shadow: 1px 1px 5px black;
+}
+
+.activeFilter {
+    background: rgb(88, 88, 88);
+    color: aliceblue;
+}
+
+.filterIcon {
     cursor: pointer;
 }
-.filterIcon{
-    cursor: pointer;
-}
-.hideFilters{
+
+.hideFilters {
+    position: absolute;
+    right: -30px;
     height: 0;
-    width: 0;
     overflow: hidden;
 }

@@ -1,5 +1,14 @@
-.wrapper {
-    text-align: center;
+.wrapper{
+    display: grid;
+}
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-items: end;
+    position: relative;
+    gap: 15px;
+    justify-self: center;
+    margin-left: 50px;
 }
 
 .itemsGrid {
@@ -17,8 +26,6 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
 }
-
-@media (max-width: 768px) {}
 
 @media (max-width: 450px) {
     .itemsGrid {

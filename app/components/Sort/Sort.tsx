@@ -7,11 +7,11 @@ import FilterIcon from "./filter-svgrepo-com.svg"
 import Image from "next/image";
 
 const Sort = ({ resetValue, sortedData, sortedKeys, setData }: SortProps) => {
-    const [activeKey, setActiveKey] = useState(resetValue)
+    const [activeKey, setActiveKey] = useState<string>(resetValue ?? '')
     const [keys, setKeys] = useState<ReactNode[]>([<></>])
     const [showFilters, setShowFilters] = useState(false)
     useEffect(() => {
-        if (activeKey !== resetValue) {
+        if (activeKey !== resetValue && activeKey !== '') {
             setData(sortedData.filter((data) => data.tags.includes(activeKey)))
         }
         else {
@@ -19,8 +19,8 @@ const Sort = ({ resetValue, sortedData, sortedKeys, setData }: SortProps) => {
         }
     }, [activeKey])
     useEffect(() => {
-        setKeys(sortedKeys.map((key: string) => <div className={styles.filterItem} key={key} onClick={() => setActiveKey(key)}>{translate(key)}</div>))
-    }, [])
+        setKeys(sortedKeys.map((key: string) => <div className={`${styles.filterItem} ${(key === activeKey) && styles.activeFilter}`} key={key} onClick={() => setActiveKey(key)}>{translate(key)}</div>))
+    }, [activeKey])
     return (
         <div>
             <Image onClick={() => setShowFilters(!showFilters)} className={styles.filterIcon} src={FilterIcon} alt="filter" width={32} height={32} />
