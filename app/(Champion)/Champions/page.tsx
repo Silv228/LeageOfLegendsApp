@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { IResponse } from '@/interfaces/championsFull.interface'
 import styles from './page.module.css'
 import { api } from '@/app/myApi/api'
@@ -7,7 +7,7 @@ import ChampionsPageContainer from '../Components/ChampionsPage/ChampionsPageCon
 
 export const metadata: Metadata = {
   title: 'Чемпионы Лиги Легенд',
-  description: 'Здесь собраны все чемпионы игры Лига Легенд)))'
+  description: 'Здесь собраны все чемпионы игры Лига Легенд'
 }
 export default async function Champions() {
   const res: IResponse = await api.getChampions()

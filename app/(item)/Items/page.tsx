@@ -1,6 +1,5 @@
 import styles from './page.module.css'
 import { IItems } from '@/interfaces/items.interface'
-import ItemPage from '../components/ItemPage/ItemPage'
 import { api } from '@/app/myApi/api'
 import { Metadata } from 'next'
 import ItemPageContainer from '../components/ItemPage/ItemPageContainer'

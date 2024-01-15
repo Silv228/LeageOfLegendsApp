@@ -17,7 +17,7 @@ const SummonersPage = ({ spellsArray, ...props }: SummonerProps) => {
     const summonersArray = spellsArray.map(spell => {
         if (spell.modes.includes('CLASSIC') || spell.modes.includes('ARAM')) return (
             <div className={styles.spell} onClick={() => handlePickSummoner(spell.id)} key={spell.key}>
-                <Image alt={spell.id} width={50} height={50} src={'http://ddragon.leagueoflegends.com/cdn/13.14.1/img/spell/' + spell.image.full} />
+                <Image alt={spell.id} width={50} height={50} src={'http://ddragon.leagueoflegends.com/cdn/14.1.1/img/spell/' + spell.image.full} />
                 <div>{spell.name}</div>
             </div>)
     })

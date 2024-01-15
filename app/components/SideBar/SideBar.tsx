@@ -1,10 +1,11 @@
 'use client'
 import Link from "next/link"
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import styles from "./SideBar.module.css"
 import Image from "next/image"
 import menu from './menu.svg'
 import { usePathname } from "next/navigation"
+import { LContext } from "@/app/Context/loadContext"
 
 const SideBar = () => {
     const [isHidden, setIsHidden] = useState<boolean>(true)
@@ -14,16 +15,21 @@ const SideBar = () => {
         runes: false,
         summoners: false,
     })
+    const path = usePathname()
+    const { setIsLoad } = useContext(LContext)
     const [previousNav, setPreviousNav] = useState('champions')
-    const page = usePathname()
-    useEffect(() => {
+    const changePage = (page: string) => {
         setIsHidden(true)
+        setIsLoad(true)
         let tempNav = navigationShowed
-        tempNav[page?.slice(1, page.length).toLocaleLowerCase()] = true
+        tempNav[page] = true
         tempNav[previousNav] = false
         setNavigationShowed(tempNav)
-        setPreviousNav(page?.slice(1, page.length).toLocaleLowerCase())
-    }, [page])
+        setPreviousNav(page)
+    }
+    useEffect(() => {
+        setIsLoad(false)
+    }, [path])
     return (
         <div>
             <div onClick={(e) => setIsHidden(!isHidden)}>
@@ -32,16 +38,16 @@ const SideBar = () => {
             <div className={`${styles.bar} ${isHidden ? styles.hiden : ''}`}>
                 <ul className={styles.navigation}>
                     <li className={navigationShowed.champions ? styles.active : ''}>
-                        <Link href={'/Champions'}>Чемпионы</Link>
+                        <Link onClick={() => changePage('champions')} href={'/Champions'}>Чемпионы</Link>
                     </li>
                     <li className={navigationShowed.items ? styles.active : ''}>
-                        <Link href={'/Items'}>Предметы</Link>
+                        <Link onClick={() => changePage('items')} href={'/Items'}>Предметы</Link>
                     </li>
                     <li className={navigationShowed.runes ? styles.active : ''}>
-                        <Link href={'/Runes'}>Руны</Link>
+                        <Link onClick={() => changePage('runes')} href={'/Runes'}>Руны</Link>
                     </li>
                     <li className={navigationShowed.summoners ? styles.active : ''}>
-                        <Link href={'/Summoners'}>Самонерки</Link>
+                        <Link onClick={() => changePage('summoners')} href={'/Summoners'}>Самонерки</Link>
                     </li>
                 </ul>
             </div>

@@ -10,7 +10,7 @@ module.exports = {
                 protocol: 'http',
                 hostname: 'ddragon.leagueoflegends.com',
                 port: '',
-                pathname: '/cdn/13.14.1/img/**'
+                pathname: '/cdn/14.1.1/img/**'
             },
             {
                 protocol: 'http',
@@ -22,13 +22,13 @@ module.exports = {
                 protocol: 'http',
                 hostname: 'ddragon.leagueoflegends.com',
                 port: '',
-                pathname: '/cdn/13.14.1/img/spell/*'
+                pathname: '/cdn/14.1.1/img/spell/*'
             },
             {
                 protocol: 'http',
                 hostname: 'ddragon.leagueoflegends.com',
                 port: '',
-                pathname: '/cdn/13.14.1/img/passive/*'
+                pathname: '/cdn/14.1.1/img/passive/*'
             },
             {
                 protocol: 'http',

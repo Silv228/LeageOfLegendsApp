@@ -1,6 +1,8 @@
 import SideBar from './components/SideBar/SideBar'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { LoadProvider } from './Context/loadContext'
+import LoadContainer from './LoadContainer'
 
 const inter = Inter({ subsets: ['latin'], weight: ['400'] })
 
@@ -16,10 +18,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+      <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
       <body className={inter.className}>
-        <SideBar />
-        {children}
+        <LoadProvider value={false}>
+          <SideBar />
+          <LoadContainer>
+            {children}
+          </LoadContainer>
+        </LoadProvider>
       </body>
     </html>
   )

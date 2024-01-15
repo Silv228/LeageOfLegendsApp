@@ -10,7 +10,7 @@ const ItemDesc = ({ data, setId, setInfoOpen, itemsObj, ...props }: ItemDescProp
             {data && <div className={styles.infoFull} {...props}>
                 <div className={styles.headInfo} onClick={(e) => setInfoOpen(false)}>
                     <div className={styles.nameBlock}>
-                        <Image alt={data?.image.full ?? 'item'} width={50} height={50} src={'http://ddragon.leagueoflegends.com/cdn/13.14.1/img/item/' + data?.image.full} />
+                        <Image alt={data?.image.full ?? 'item'} width={50} height={50} src={'http://ddragon.leagueoflegends.com/cdn/14.1.1/img/item/' + data?.image.full} />
                         <div>
                             <div className={styles.name}>{data?.name}</div>
                             <div className={styles.plaintext}>{data?.plaintext}</div>
@@ -25,7 +25,7 @@ const ItemDesc = ({ data, setId, setInfoOpen, itemsObj, ...props }: ItemDescProp
                         <div className={styles.into}>
                             {data.into.map((item) => (
                                 <div className={styles.nameBlock} key={item} onClick={(e) => { setId(item) }}>
-                                    <Image alt={item} width={50} height={50} src={'http://ddragon.leagueoflegends.com/cdn/13.14.1/img/item/' + item + '.png'} />
+                                    <Image alt={item} width={50} height={50} src={'http://ddragon.leagueoflegends.com/cdn/14.1.1/img/item/' + item + '.png'} />
                                     <div>
                                         <div>{itemsObj[item].name}</div>
                                         <div><span className={styles.label}>Стоимость</span> {itemsObj[item].gold.total}({itemsObj[item].gold.base})</div>
@@ -41,7 +41,7 @@ const ItemDesc = ({ data, setId, setInfoOpen, itemsObj, ...props }: ItemDescProp
                         <div className={styles.from}>
                             {data.from.map((item) => (
                                 <div className={styles.nameBlock} key={item} onClick={(e) => { setId(item) }}>
-                                    <Image alt={item} width={50} height={50} src={'http://ddragon.leagueoflegends.com/cdn/13.14.1/img/item/' + item + '.png'} />
+                                    <Image alt={item} width={50} height={50} src={'http://ddragon.leagueoflegends.com/cdn/14.1.1/img/item/' + item + '.png'} />
                                     <div>
                                         <div>{itemsObj[item].name}</div>
                                         <div><span className={styles.label}>Стоимость</span> {itemsObj[item].gold.total}({itemsObj[item].gold.base})</div>

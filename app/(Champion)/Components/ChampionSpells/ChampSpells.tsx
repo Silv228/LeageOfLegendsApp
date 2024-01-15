@@ -18,7 +18,7 @@ const ChampSpells = ({ ChampKey, spells, partype, passive, ...props }: ChampSpel
             <div className={styles.spellName}>{spell.name} <span className={styles.additionalyInfo}>{buttons[i]}</span></div>
             <div className={styles.shortInfo}>
                 <div className={styles.imgBlock}>
-                    <Image onClick={() => setButton(buttons[i])} className={styles.sellIcon} width={60} height={60} alt={spell.id} src={'http://ddragon.leagueoflegends.com/cdn/13.14.1/img/spell/' + spell.image.full} />
+                    <Image onClick={() => setButton(buttons[i])} className={styles.sellIcon} width={60} height={60} alt={spell.id} src={'http://ddragon.leagueoflegends.com/cdn/14.1.1/img/spell/' + spell.image.full} />
                     <Image className={styles.labelPlay} src={'/play.svg'} width={12} height={12} alt='play' />
                 </div>
                 <div className={styles.costInfo}>
@@ -36,7 +36,7 @@ const ChampSpells = ({ ChampKey, spells, partype, passive, ...props }: ChampSpel
                 <div className={styles.spell}>
                     <div className={styles.spellName}>{passive.name} <span className={styles.additionalyInfo}>Пассивное умение</span></div>
                     <div className={styles.shortInfo}>
-                        <Image className={styles.sellIcon} width={60} height={60} alt={passive.image.full} src={'http://ddragon.leagueoflegends.com/cdn/13.14.1/img/passive/' + passive.image.full} />
+                        <Image className={styles.sellIcon} width={60} height={60} alt={passive.image.full} src={'http://ddragon.leagueoflegends.com/cdn/14.1.1/img/passive/' + passive.image.full} />
                         <div className={styles.description} dangerouslySetInnerHTML={{ __html: '<div>' + passive.description + '</div>' }} />
                     </div>
                 </div>
