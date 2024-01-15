@@ -7,7 +7,7 @@ import { ItemsCardProps } from './ItemCard.props'
 const ItemCard = ({ name, img, info, id, gold, ...props }: ItemsCardProps) => {
     return (
         <div className={styles.card} {...props}>
-            <Image alt={img} width={64} height={64} src={'http://ddragon.leagueoflegends.com/cdn/14.1.1/img/item/' + img} />
+            <Image loading="lazy" alt={img} width={64} height={64} src={process.env.NEXT_PUBLIC_DOMAIN + '/img/item/' + img} />
             <div className={styles.name}>{name}</div>
         </div>
     )

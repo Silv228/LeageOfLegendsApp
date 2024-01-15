@@ -3,7 +3,7 @@ import { IRunes } from '@/interfaces/runes.interface';
 
 export const api = {
     async getChampions() {
-        const data = await fetch('http://ddragon.leagueoflegends.com/cdn/14.1.1/data/ru_RU/champion.json',
+        const data = await fetch(process.env.NEXT_PUBLIC_DOMAIN + '/data/ru_RU/champion.json',
             {
                 method: 'GET'
             }
@@ -11,7 +11,7 @@ export const api = {
         return data.json()
     },
     async getChampionData(champion: string) {
-        const data = await fetch('http://ddragon.leagueoflegends.com/cdn/14.1.1/data/ru_RU/champion/' + champion + '.json', {
+        const data = await fetch(process.env.NEXT_PUBLIC_DOMAIN + '/data/ru_RU/champion/' + champion + '.json', {
             method: "GET"
         })
         if (data.status !== 200) {
@@ -20,7 +20,7 @@ export const api = {
         return data.json()
     },
     async getItems() {
-        const data = await fetch('http://ddragon.leagueoflegends.com/cdn/14.1.1/data/ru_RU/item.json',
+        const data = await fetch(process.env.NEXT_PUBLIC_DOMAIN + '/data/ru_RU/item.json',
             {
 
                 method: 'GET'
@@ -30,13 +30,13 @@ export const api = {
         return data.json()
     },
     async getRunes(): Promise<IRunes[]> {
-        const data = await fetch('http://ddragon.leagueoflegends.com/cdn/14.1.1/data/ru_RU/runesReforged.json', {
+        const data = await fetch(process.env.NEXT_PUBLIC_DOMAIN + '/data/ru_RU/runesReforged.json', {
             method: "GET"
         })
         return data.json()
     },
     async getSummonersSpell() {
-        const data = await fetch('http://ddragon.leagueoflegends.com/cdn/14.1.1/data/ru_RU/summoner.json',
+        const data = await fetch(process.env.NEXT_PUBLIC_DOMAIN + '/data/ru_RU/summoner.json',
             {
                 method: 'GET'
             }

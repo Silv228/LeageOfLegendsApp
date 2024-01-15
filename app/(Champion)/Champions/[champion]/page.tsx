@@ -10,7 +10,7 @@ import { IChampion } from "@/interfaces/champion.interface";
 import { translate } from "@/app/helpers/translate";
 
 export async function generateStaticParams() {
-    const champs: IResponse = await fetch('http://ddragon.leagueoflegends.com/cdn/14.1.1/data/ru_RU/champion.json').then((res) => res.json())
+    const champs: IResponse = await fetch(process.env.NEXT_PUBLIC_DOMAIN + '/data/ru_RU/champion.json').then((res) => res.json())
     return (Object.keys(champs.data).map((cham) => ({
         champion: cham,
     })))
@@ -33,7 +33,6 @@ const ChampionPage = async ({ params }: { params: { champion: string } }) => {
             <ChampSpells className={styles.spells} ChampKey={champ.data[params.champion].key} partype={champ.data[params.champion].partype} spells={champ.data[params.champion].spells} passive={champ.data[params.champion].passive} />
             <ChampSkins className={styles.skins} champion={params.champion} skins={champ.data[params.champion].skins} />
         </div>
-
     )
 }
 export default ChampionPage

@@ -12,11 +12,12 @@ const ChampDesc = ({ champData, champion, tags, ...props }: ChampDescProps): JSX
         setHint(hintName)
         setCursorPos(pos)
     }
+    console.log(champData.image)
     return (
         <div className={styles.description} {...props}>
             <div className={styles.headDescription}>
                 <div className={styles.firstInfo}>
-                    <Image width={120} height={120} alt={champion} src={'http://ddragon.leagueoflegends.com/cdn/14.1.1/img/champion/' + champData.image.full} />
+                    <Image width={120} height={120} alt={champion} src={process.env.NEXT_PUBLIC_DOMAIN + '/img/champion/' + champData.image.full} />
                     <div className={styles.tags}>
                         <div className={styles.name}>{champData.name}</div>
                         <div>{tags}</div>
